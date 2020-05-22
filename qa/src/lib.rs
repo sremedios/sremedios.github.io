@@ -4,12 +4,13 @@ extern crate image;
 
 mod utils;
 
-use image::{DynamicImage, GenericImageView, ImageFormat, io::Reader};
+use nifti::{NiftiObject, InMemNiftiObject, NiftiVolume};
 use wasm_bindgen::prelude::*;
 use std::fmt;
 use std::io::Cursor;
 use std::fs::File;
 use std::env;
+use std::iter;
 use std::path::{Path, PathBuf};
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
@@ -29,25 +30,52 @@ extern "C" {
 pub struct Lightbox {
     width: u32,
     height: u32,
-    img: image::RgbaImage,
+    img: Vec<u8>,
 }
 
 #[wasm_bindgen]
 impl Lightbox {
-    pub fn new(in_bytes: Vec<u8>) -> Lightbox {
-        log("Entered constructor");
-        log(&format!("length: {}", in_bytes.len()));
-        log(&format!("raw bytes"));
-        for byte in in_bytes.iter().take(10) {
-            log(&format!("{} ", byte));
+    pub fn new(raw_data: &[u8]) -> Lightbox {
+        log(&format!("Rust raw input"));
+        for byte in raw_data.iter().take(10) {
+            log(&format!("{}", byte));
         }
-        let img = image::load_from_memory_with_format(&in_bytes, ImageFormat::Png).unwrap();
-        log(&format!("Image decoded"));
 
-        log("After loading image");
-        let (width, height) = img.dimensions();
-        log(&format!("{}", width));
-        log(&format!("{}", height));
+        let obj = InMemNiftiObject::from_reader(raw_data).unwrap();
+        // use obj
+        let header = obj.header();
+        let volume = obj.volume();
+        let dims = volume.dim();
+
+        log(&format!("Rust byte vec"));
+        for byte in volume.raw_data().iter().take(10) {
+            log(&format!("{}", byte));
+        }
+
+        let img = volume.raw_data();
+        // get a 100x100 patch to see what's up
+        let width = 100;
+        let height = 100;
+        let img = img[600..10600]
+            .to_vec()
+            // JS needs 4 channels, RGBA -> repeat each element of vector
+            .iter()
+            .flat_map(|&x| {
+                let scaled_x = x / 4;
+                iter::repeat(scaled_x).take(4)
+            })
+            // scale up alpha to max
+            .enumerate()
+            .map(|(i, x)| {
+                if i > 0 && (i+1) % 4 == 0 {
+                    u8::MAX  
+                } else {
+                    x
+                }
+            })
+            .collect::<Vec<u8>>();
+        
+
         Lightbox {
             width,
             height,
@@ -65,10 +93,8 @@ impl Lightbox {
         self.width
     }
 
-    // TODO: figure out how to return some kind of image that HTML canvas
-    // can draw. Maybe HTML canvas can take a bytestring?
-    pub fn img(&self) -> image::RgbaImage {
-        self.img.as_rgba8.buffer
+    pub fn img(&self) -> Vec<u8> {
+        self.img.clone()
     }
 }
 
