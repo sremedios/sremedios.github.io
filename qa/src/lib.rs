@@ -1,10 +1,13 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
 extern crate image;
 
 mod utils;
 
-use image::{DynamicImage, GenericImageView};
+use image::{DynamicImage, GenericImageView, ImageFormat, io::Reader};
 use wasm_bindgen::prelude::*;
 use std::fmt;
+use std::io::Cursor;
 use std::fs::File;
 use std::env;
 use std::path::{Path, PathBuf};
@@ -26,32 +29,21 @@ extern "C" {
 pub struct Lightbox {
     width: u32,
     height: u32,
-    img: DynamicImage,
+    img: image::RgbaImage,
 }
 
 #[wasm_bindgen]
 impl Lightbox {
-    pub fn new(input_path: &str) -> Lightbox {
-        log(input_path);
-        log("Before loading image");
-        let img_path = Path::new(input_path);
-        log(&format!("{}", img_path.exists()));
-
-
-        log("Before cwd");
-        let cwd = env::current_dir();
-        match cwd {
-            Ok(p) => {
-                log(&format!("{}", p.exists()));
-                log(&format!("{}", p.display()));
-            },
-            Err(e) => log(&format!("Some error: {}", e)),
+    pub fn new(in_bytes: Vec<u8>) -> Lightbox {
+        log("Entered constructor");
+        log(&format!("length: {}", in_bytes.len()));
+        log(&format!("raw bytes"));
+        for byte in in_bytes.iter().take(10) {
+            log(&format!("{} ", byte));
         }
-        log("After cwd");
+        let img = image::load_from_memory_with_format(&in_bytes, ImageFormat::Png).unwrap();
+        log(&format!("Image decoded"));
 
-
-
-        let img = image::open(&img_path).unwrap();
         log("After loading image");
         let (width, height) = img.dimensions();
         log(&format!("{}", width));
@@ -65,6 +57,18 @@ impl Lightbox {
 
     pub fn render(&self) -> String {
         self.to_string()
+    }
+    pub fn height(&self) -> u32 {
+        self.height
+    }
+    pub fn width(&self) -> u32 {
+        self.width
+    }
+
+    // TODO: figure out how to return some kind of image that HTML canvas
+    // can draw. Maybe HTML canvas can take a bytestring?
+    pub fn img(&self) -> image::RgbaImage {
+        self.img.as_rgba8.buffer
     }
 }
 
