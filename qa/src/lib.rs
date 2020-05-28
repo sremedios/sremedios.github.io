@@ -5,7 +5,10 @@ extern crate image;
 mod utils;
 
 use nifti::{NiftiObject, InMemNiftiObject, NiftiVolume};
+use nifti::volume::ndarray::IntoNdArray;
 use wasm_bindgen::prelude::*;
+use ndarray::*;
+use ndarray_stats::*;
 use std::fmt;
 use std::io::Cursor;
 use std::fs::File;
@@ -28,9 +31,9 @@ extern "C" {
 
 #[wasm_bindgen]
 pub struct Lightbox {
-    width: u32,
-    height: u32,
-    img: Vec<u8>,
+    width: usize,
+    height: usize,
+    img: Vec<u16>,
 }
 
 #[wasm_bindgen]
@@ -44,56 +47,54 @@ impl Lightbox {
         let obj = InMemNiftiObject::from_reader(raw_data).unwrap();
         // use obj
         let header = obj.header();
-        let volume = obj.volume();
-        let dims = volume.dim();
+        let img = obj.into_volume().into_ndarray::<u16>().unwrap();
 
-        log(&format!("Rust byte vec"));
-        for byte in volume.raw_data().iter().take(10) {
-            log(&format!("{}", byte));
+        log(&format!("Rust data"));
+        for elem in img.iter().take(10) {
+            log(&format!("{}", elem));
         }
 
-        let img = volume.raw_data();
-        // get a 100x100 patch to see what's up
-        let width = 100;
-        let height = 100;
-        let img = img[600..10600]
-            .to_vec()
+        let max = img.max().unwrap();
+
+        // get a slice to see what's up
+        let slice = img.slice(s![.., .., 150])
+            .to_slice()
             // JS needs 4 channels, RGBA -> repeat each element of vector
             .iter()
             .flat_map(|&x| {
-                let scaled_x = x / 4;
+                let scaled_x = x[0] / max * 255 / 4;
                 iter::repeat(scaled_x).take(4)
             })
             // scale up alpha to max
             .enumerate()
             .map(|(i, x)| {
                 if i > 0 && (i+1) % 4 == 0 {
-                    u8::MAX  
+                    u16::MAX  
                 } else {
                     x
                 }
             })
-            .collect::<Vec<u8>>();
+            .collect::<Vec<u16>>();
         
 
         Lightbox {
-            width,
-            height,
-            img,
+            width: img.shape()[0],
+            height: img.shape()[1],
+            img: slice,
         }
     }
 
     pub fn render(&self) -> String {
         self.to_string()
     }
-    pub fn height(&self) -> u32 {
+    pub fn height(&self) -> usize {
         self.height
     }
-    pub fn width(&self) -> u32 {
+    pub fn width(&self) -> usize {
         self.width
     }
 
-    pub fn img(&self) -> Vec<u8> {
+    pub fn img(&self) -> Vec<u16> {
         self.img.clone()
     }
 }
