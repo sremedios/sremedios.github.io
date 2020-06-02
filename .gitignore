@@ -15,5 +15,5 @@ Cargo.lock
 # Ignore testing data directory
 **/data
 
-# Ignore node modules
+# Ignore node stuff
 **/node_modules
