@@ -1,5 +1,5 @@
-import { memory } from "/qa/qa_bg";
-import { Lightbox } from "/qa";
+import { memory } from "qa/qa_bg";
+import { Lightbox } from "qa";
 
 // File stuff
 const fileSelector = document.getElementById('file-selector')
