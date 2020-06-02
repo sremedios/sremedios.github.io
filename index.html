@@ -9,20 +9,7 @@
 
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Sam</b>uel Remedios</a>
-    <!-- Float links to the right. -->
-    <div class="w3-right">
-      <a href="#home" class="w3-bar-item w3-button">Home</a>
-      <a href="wasm_test.html" class="w3-bar-item w3-button">wasm</a>
-      <a href="cv.html" class="w3-bar-item w3-button">CV</a>
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    </div>
-  </div>
-</div>
+<div class="w3-top" w3-include-html="navbar.html"></div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px; padding-top:55px" id="home">
@@ -83,9 +70,8 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Last updated 2 June 2020.</p>
-</footer>
+<footer class="w3-center w3-black w3-padding-16" w3-include-html="footer.html"></footer>
 
+<script>w3.includeHTML();</script>
 </body>
 </html>
