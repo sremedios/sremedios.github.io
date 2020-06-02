@@ -7,8 +7,7 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<!-- Header -->
-<embed type="text/html" src="header.html">
+<div id="navbarID"> <!-- your header --> </div>
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
@@ -20,6 +19,12 @@
 <!-- End page content -->
 </div>
 
+<div id="footerID"> <!-- your header --> </div>
+
+<script>
+  $("#navbarID").load("navbar.html");
+  $("#footerID").load("footer.html");
+</script>
 
 <!-- Footer -->
 
