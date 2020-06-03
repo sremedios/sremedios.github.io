@@ -53,7 +53,7 @@ fn get_julia_set(width: u32, height: u32, c: Complex) -> Vec<u8> {
 
     let param_i = 1.5;
     let param_r = 1.5;
-    let scale = 0.005;
+    let scale: f64 = 0.05_f64;
 
     for x in 0..width {
         for y in 0..height {
@@ -62,10 +62,10 @@ fn get_julia_set(width: u32, height: u32, c: Complex) -> Vec<u8> {
                 imaginary: x as f64 * scale - param_i,
             };
             let iter_index = get_iter_index(z, c);
-            data.push((iter_index / 4) as u8);
-            data.push((iter_index / 2) as u8);
-            data.push(iter_index as u8);
-            data.push(255);
+            data.push((iter_index / 3) as u8);
+            data.push((iter_index / 3) as u8);
+            data.push((iter_index / 3) as u8);
+            data.push(u8::MAX);
         }
     }
 
@@ -115,19 +115,11 @@ impl Add<Complex> for Complex {
 }
 
 
-
-
-
-
-
-
-
-
 #[wasm_bindgen]
 pub struct Lightbox {
-    width: usize,
-    height: usize,
-    img: Vec<u16>,
+    width: u32,
+    height: u32,
+    img: Vec<u8>,
 }
 
 #[wasm_bindgen]
@@ -138,10 +130,12 @@ impl Lightbox {
             log(&format!("{}", byte));
         }
 
+        // TODO: figure out how to use InMemNiftiObject correctly
+        // because the data gets destroyed at this point
         let obj = InMemNiftiObject::from_reader(raw_data).unwrap();
         // use obj
         let header = obj.header();
-        let img = obj.into_volume().into_ndarray::<u16>().unwrap();
+        let img = obj.into_volume().into_ndarray::<u8>().unwrap();
 
         log(&format!("Rust data"));
         for elem in img.iter().take(10) {
@@ -153,49 +147,58 @@ impl Lightbox {
         // get a slice to see what's up
         let slice = img.slice(s![.., .., 150])
             .to_slice()
-            // JS needs 4 channels, RGBA -> repeat each element of vector
             .iter()
+            // JS needs 4 channels, RGBA -> repeat each element of vector
             .flat_map(|&x| {
-                let scaled_x = x[0] / max * 255 / 4;
+                let scaled_x = x[0] / max * 255_u8 / 3_u8;
                 iter::repeat(scaled_x).take(4)
             })
             // scale up alpha to max
             .enumerate()
             .map(|(i, x)| {
                 if i > 0 && (i+1) % 4 == 0 {
-                    u16::MAX  
+                    255_u8 
                 } else {
                     x
                 }
             })
-            .collect::<Vec<u16>>();
+            .collect::<Vec<u8>>();
+
+        log(&format!("u8 image data"));
+        for elem in slice.iter().take(10) {
+            log(&format!("{}", elem));
+        }
+
+        // cast to u8
+        let slice = slice.iter().map(|x| *x as u8).collect::<Vec<u8>>();
+
+        log(&format!("u8 image data"));
+        for elem in slice.iter().take(10) {
+            log(&format!("{}", elem));
+        }
         
 
         Lightbox {
-            width: img.shape()[0],
-            height: img.shape()[1],
+            width: img.shape()[0] as u32,
+            height: img.shape()[1] as u32,
             img: slice,
         }
     }
 
-    pub fn render(&self) -> String {
-        self.to_string()
+    pub fn render_to_canvas(&self, ctx: &CanvasRenderingContext2d) -> Result<(), JsValue>{
+        let data = ImageData::new_with_u8_clamped_array_and_sh(
+            Clamped(&mut self.img.clone()), 
+            self.width, 
+            self.height,
+        )?;
+
+
+        ctx.put_image_data(&data, 0.0, 0.0)
     }
-    pub fn height(&self) -> usize {
+    pub fn height(&self) -> u32 {
         self.height
     }
-    pub fn width(&self) -> usize {
+    pub fn width(&self) -> u32 {
         self.width
-    }
-
-    pub fn img(&self) -> Vec<u16> {
-        self.img.clone()
-    }
-}
-
-impl fmt::Display for Lightbox {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "This is a lightbox\n")?;
-        Ok(())
     }
 }
