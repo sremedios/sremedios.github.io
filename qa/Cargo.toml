@@ -16,6 +16,7 @@ ndarray = "0.13.1"
 ndarray-stats = "0.3"
 nifti = { version = "0.9", features = ["ndarray", "ndarray_volumes"] }
 wasm-bindgen = "0.2"
+web-sys = { version = "0.3.4", features = ["CanvasRenderingContext2d","ImageData"] }
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
