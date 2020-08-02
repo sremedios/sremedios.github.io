@@ -230,3 +230,40 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+
+.column {
+  float: left;
+  padding: 50px;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.w3-transparent-grey,.w3-hover-transparent-grey:hover,.w3-transparent-gray,.w3-hover-transparent-gray:hover{
+    color:#000!important;
+    background:rgba(1,1,1,0.1);
+}
+
+.sam-text-block {
+    color:#000!important;
+    background:rgba(1,1,1,0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sam-center {
+    margin-left: auto;
+    margin-right: auto;
+}
