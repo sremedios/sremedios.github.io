@@ -1,0 +1,15 @@
+{
+  "name": "qa",
+  "collaborators": [
+    "sremedios <sam.remedios@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "qa_bg.wasm",
+    "qa.js",
+    "qa.d.ts"
+  ],
+  "module": "qa.js",
+  "types": "qa.d.ts",
+  "sideEffects": false
+}
