@@ -1,7 +1,7 @@
 const canvas = document.getElementById("lightbox-canvas")
 const ctx = canvas.getContext('2d');
 
-import("/qa/pkg").then(module => {
+import("./resources/pkg").then(module => {
     // Try to load from file selection
     function readImage() {
         // break on no files
