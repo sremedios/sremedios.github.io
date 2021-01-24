@@ -17,3 +17,7 @@ Cargo.lock
 
 # Ignore node stuff
 **/node_modules
+
+# Ignore bak dir
+**/bak
+*bak*

@@ -165,3 +165,8 @@ pub fn open_image(canvas: HtmlCanvasElement, ctx: CanvasRenderingContext2d) -> L
 pub fn rev(lb: &mut Lightbox) {
     lb.raw_pixels.reverse();
 }
+
+#[wasm_bindgen(start)]
+pub fn main() -> Result<(), JsValue> {
+    Ok(())
+}
