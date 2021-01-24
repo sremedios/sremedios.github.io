@@ -28,7 +28,7 @@
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
   "dependencies": {
     "ini": ">=1.3.6",
-    "qa": "file:/resources/pkg"
+    "qa": "file:/wasm"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^5.0.0",
