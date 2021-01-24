@@ -11,12 +11,13 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-image = "0.23.4"
+base64 = "0.13.0"
+image = "0.23.12"
 ndarray = "0.13.1"
 ndarray-stats = "0.3"
 nifti = { version = "0.9", features = ["ndarray", "ndarray_volumes"] }
-wasm-bindgen = "0.2"
-web-sys = { version = "0.3.4", features = ["CanvasRenderingContext2d","ImageData"] }
+serde = { version = "1.0", features = ["derive"] }
+wasm-bindgen = "0.2.25"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -31,9 +32,22 @@ console_error_panic_hook = { version = "0.1.1", optional = true }
 # Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
 # wee_alloc = { version = "0.4.2", optional = true }
 
-[dev-dependencies]
-wasm-bindgen-test = "0.2"
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O3", "--enable-mutable-globals"]
 
-[profile.release]
-# Tell `rustc` to optimize for small code size.
-# opt-level = "s"
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "Document",
+    "Element",
+    "HtmlElement",
+    "Node",
+    "Window",
+    "CanvasRenderingContext2d",
+    "ImageData",
+    "HtmlCanvasElement",
+    "HtmlImageElement",
+    "console",
+    "CssStyleDeclaration",
+    "EventTarget",
+]

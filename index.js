@@ -1,32 +1,29 @@
-import { memory } from "qa/qa_bg";
-import { Lightbox } from "qa";
+const canvas = document.getElementById("lightbox-canvas")
+const ctx = canvas.getContext('2d');
 
-// File stuff
-const fileSelector = document.getElementById('file-selector')
-fileSelector.addEventListener('change', (event) => {
-    const fileList = event.target.files;
-    console.log(fileList);
+import("/qa/pkg").then(module => {
+    // Try to load from file selection
+    function readImage() {
+        // break on no files
+        if (!this.files || !this.files[0]) return;
 
-    var fileData = new Blob([fileList[0]]);
-    var reader = new FileReader();
-    reader.readAsArrayBuffer(fileData);
-    reader.onload = function() {
-        var arrayBuffer = reader.result
-        var bytes = new Uint8Array(arrayBuffer);
-        console.log(bytes);
-
-        // Drawing stuff
-        const lightbox = Lightbox.new(bytes);
-        const width = lightbox.width()
-        const height = lightbox.height()
-        console.log("Lightbox loaded");
-
-        const canvas = document.getElementById("lightbox-canvas")
-        const ctx = canvas.getContext('2d');
-
-        lightbox.render_to_canvas(ctx, width, height);
+        const reader = new FileReader();
+        reader.addEventListener("load", (event) => {
+            const img = new Image();
+            img.addEventListener("load", () => {
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                ctx.drawImage(img, 0, 0);
+                let newimg = module.open_image(canvas, ctx);
+                module.rev(newimg);
+                module.putImageData(canvas, ctx, newimg);
+            });
+            img.src = event.target.result;
+        });
+        reader.readAsDataURL(this.files[0]);
     }
 
+    const fileSelector = document.getElementById('file-selector')
+    fileSelector.addEventListener('change', readImage);
+
+    
 });
-
-

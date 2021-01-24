@@ -4,21 +4,17 @@ extern crate image;
 
 mod utils;
 
-use nifti::{NiftiObject, InMemNiftiObject, NiftiVolume};
-use nifti::volume::ndarray::IntoNdArray;
-use wasm_bindgen::prelude::*;
-use wasm_bindgen::Clamped;
-use web_sys::{CanvasRenderingContext2d, ImageData};
+use base64::{decode, encode};
+use image::DynamicImage::ImageRgba8;
+use image::{GenericImage, GenericImageView};
 use ndarray::*;
 use ndarray_stats::*;
-use std::fmt;
-use std::ops::Add;
-use std::io::Cursor;
-use std::fs::File;
-use std::env;
-use std::iter;
-use std::f64;
-use std::path::{Path, PathBuf};
+use nifti::volume::ndarray::IntoNdArray;
+use nifti::{InMemNiftiObject, NiftiObject, NiftiVolume};
+use serde::{Deserialize, Serialize};
+use wasm_bindgen::prelude::*;
+use wasm_bindgen::Clamped;
+use web_sys::{CanvasRenderingContext2d, HtmlCanvasElement, ImageData};
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -26,105 +22,25 @@ use std::path::{Path, PathBuf};
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-// Debugging in console
 #[wasm_bindgen]
-extern "C" {
-    #[wasm_bindgen(js_namespace = console)]
-    fn log(s: &str);
-}
-
-// Testing canvas drawing with Julia set
-#[wasm_bindgen]
-pub fn draw(
-    ctx: &CanvasRenderingContext2d,
-    width: u32,
-    height: u32,
-    real: f64,
-    imaginary: f64,
-) -> Result<(), JsValue> {
-    let c = Complex { real, imaginary };
-    let mut data = get_julia_set(width, height, c);
-    let data = ImageData::new_with_u8_clamped_array_and_sh(Clamped(&mut data), width, height)?;
-    ctx.put_image_data(&data, 0.0, 0.0)
-}
-
-fn get_julia_set(width: u32, height: u32, c: Complex) -> Vec<u8> {
-    let mut data = Vec::new();
-
-    let param_i = 1.5;
-    let param_r = 1.5;
-    let scale: f64 = 0.05_f64;
-
-    for x in 0..width {
-        for y in 0..height {
-            let z = Complex {
-                real: y as f64 * scale - param_r,
-                imaginary: x as f64 * scale - param_i,
-            };
-            let iter_index = get_iter_index(z, c);
-            data.push((iter_index / 3) as u8);
-            data.push((iter_index / 3) as u8);
-            data.push((iter_index / 3) as u8);
-            data.push(u8::MAX);
-        }
-    }
-
-    data
-}
-
-fn get_iter_index(z: Complex, c: Complex) -> u32 {
-    let mut iter_index: u32 = 0;
-    let mut z = z;
-    while iter_index < 900 {
-        if z.norm() > 2.0 {
-            break;
-        }
-        z = z.square() + c;
-        iter_index += 1;
-    }
-    iter_index
-}
-
-#[derive(Clone, Copy, Debug)]
-struct Complex {
-    real: f64,
-    imaginary: f64,
-}
-
-impl Complex {
-    fn square(self) -> Complex {
-        let real = (self.real * self.real) - (self.imaginary * self.imaginary);
-        let imaginary = 2.0 * self.real * self.imaginary;
-        Complex { real, imaginary }
-    }
-
-    fn norm(&self) -> f64 {
-        (self.real * self.real) + (self.imaginary * self.imaginary)
-    }
-}
-
-impl Add<Complex> for Complex {
-    type Output = Complex;
-
-    fn add(self, rhs: Complex) -> Complex {
-        Complex {
-            real: self.real + rhs.real,
-            imaginary: self.imaginary + rhs.imaginary,
-        }
-    }
-}
-
-
-#[wasm_bindgen]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Lightbox {
+    raw_pixels: Vec<u8>,
     width: u32,
     height: u32,
-    img: Vec<u8>,
 }
 
 #[wasm_bindgen]
 impl Lightbox {
-    pub fn new(raw_data: &[u8]) -> Lightbox {
+    pub fn new(raw_pixels: Vec<u8>, width: u32, height: u32) -> Lightbox {
+        Lightbox {
+            raw_pixels,
+            width,
+            height,
+        }
+    }
+
+    /*
         log(&format!("Rust raw input"));
         for byte in raw_data.iter().take(10) {
             log(&format!("{}", byte));
@@ -135,17 +51,18 @@ impl Lightbox {
         let obj = InMemNiftiObject::from_reader(raw_data).unwrap();
         // use obj
         let header = obj.header();
-        let img = obj.into_volume().into_ndarray::<u8>().unwrap();
+        let raw_pixels = obj.into_volume().into_ndarray::<u8>().unwrap();
 
         log(&format!("Rust data"));
-        for elem in img.iter().take(10) {
+        for elem in raw_pixels.iter().take(10) {
             log(&format!("{}", elem));
         }
 
-        let max = img.max().unwrap();
+        let max = raw_pixels.max().unwrap();
 
         // get a slice to see what's up
-        let slice = img.slice(s![.., .., 150])
+        let slice = raw_pixels
+            .slice(s![.., .., 150])
             .to_slice()
             .iter()
             // JS needs 4 channels, RGBA -> repeat each element of vector
@@ -155,13 +72,7 @@ impl Lightbox {
             })
             // scale up alpha to max
             .enumerate()
-            .map(|(i, x)| {
-                if i > 0 && (i+1) % 4 == 0 {
-                    255_u8 
-                } else {
-                    x
-                }
-            })
+            .map(|(i, x)| if i > 0 && (i + 1) % 4 == 0 { 255_u8 } else { x })
             .collect::<Vec<u8>>();
 
         log(&format!("u8 image data"));
@@ -176,22 +87,20 @@ impl Lightbox {
         for elem in slice.iter().take(10) {
             log(&format!("{}", elem));
         }
-        
 
         Lightbox {
-            width: img.shape()[0] as u32,
-            height: img.shape()[1] as u32,
-            img: slice,
+            width: raw_pixels.shape()[0] as u32,
+            height: raw_pixels.shape()[1] as u32,
+            raw_pixels: slice,
         }
     }
 
-    pub fn render_to_canvas(&self, ctx: &CanvasRenderingContext2d) -> Result<(), JsValue>{
+    pub fn render_to_canvas(&self, ctx: &CanvasRenderingContext2d) -> Result<(), JsValue> {
         let data = ImageData::new_with_u8_clamped_array_and_sh(
-            Clamped(&mut self.img.clone()), 
-            self.width, 
+            Clamped(&mut self.raw_pixels.clone()),
+            self.width,
             self.height,
         )?;
-
 
         ctx.put_image_data(&data, 0.0, 0.0)
     }
@@ -201,4 +110,58 @@ impl Lightbox {
     pub fn width(&self) -> u32 {
         self.width
     }
+    */
+}
+
+// Read image from 2D canvas
+#[wasm_bindgen]
+pub fn get_image_data(canvas: &HtmlCanvasElement, ctx: &CanvasRenderingContext2d) -> ImageData {
+    let width = canvas.width();
+    let height = canvas.height();
+
+    ctx.get_image_data(0.0, 0.0, width as f64, height as f64)
+        .unwrap()
+}
+
+// Place Lightbox onto 2D canvas
+#[wasm_bindgen]
+pub fn putImageData(
+    canvas: &HtmlCanvasElement,
+    ctx: &CanvasRenderingContext2d,
+    mut new_image: Lightbox,
+) {
+    // Convert raw pixels into an ImageData object
+    let new_img_data = ImageData::new_with_u8_clamped_array_and_sh(
+        Clamped(&mut new_image.raw_pixels),
+        canvas.width(),
+        canvas.height(),
+    );
+
+    // Place new imagedata onto canvas
+    ctx.put_image_data(&new_img_data.unwrap(), 0.0, 0.0)
+        .expect("Should put image data on canvas");
+}
+
+// Convert ImageData to a raw pixel vec of u8
+#[wasm_bindgen]
+pub fn to_raw_pixels(imgdata: ImageData) -> Vec<u8> {
+    imgdata.data().to_vec()
+}
+
+// Convert HTML5 Canvas to Lightbox
+#[wasm_bindgen]
+#[no_mangle]
+pub fn open_image(canvas: HtmlCanvasElement, ctx: CanvasRenderingContext2d) -> Lightbox {
+    let imgdata = get_image_data(&canvas, &ctx);
+    let raw_pixels = to_raw_pixels(imgdata);
+    Lightbox {
+        raw_pixels,
+        width: canvas.width(),
+        height: canvas.height(),
+    }
+}
+
+#[wasm_bindgen]
+pub fn rev(lb: &mut Lightbox) {
+    lb.raw_pixels.reverse();
 }

@@ -23,7 +23,12 @@
     </noscript>
     <canvas id="lightbox-canvas" width="512px" height="512px"></canvas>
     <input type="file" id="file-selector">
-    <script src="./bootstrap.js"></script>
+    <script type="module">
+        import init, { Lightbox } from "./qa/pkg/qa_bg.js"; 
+        async function run() {
+            await init();
+        }
+    </script>
     <!-- <script src="./bootstrap_drawing.js"></script> -->
 </div>
 
