@@ -1,144 +1,46 @@
 <!DOCTYPE html>
 <html>
-<title>sremedios.github.io</title>
+<title>Samuel W. Remedios</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/css/w3.css">
-<body>
-
-<script src="/w3.js"></script>
-
-<!-- Navbar (sit on top) -->
-<div w3-include-html="navbar.html" id="home"></div>
-
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<body bgcolor="#E8DCB5">
+<h1>
+Samuel W. Remedios
+</h1>
 
-<!-- Banner -->
-<div class="w3-display-container w3-content w3-wide" style="max-width:1500px">
-  <img class="w3-image" src="/resources/gradcamatlas.png" alt="Some GradCAM Brains" width="1500" height="400">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white">
-    	<span class="w3-padding w3-black w3-opacity-min"><b>Sam</b>uel Remedios</span>
-    </h1>
-  </div>
-</div>
-
-
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-  </div>
-
-  <table class="sam-center">
-    <tr>
-        <td style="position:relative">
-            <a href="projects/spie2018.html">
-            <div class="w3-display-middle w3-center w3-light-grey w3-padding">
-                MR Contrast Classification
-            </div>
-            <img src="/resources/spie2018.png" style="width:350px;vertical-align:middle">
-            </a>
+<table>
+<tr>
+        <td>
+            <img src="resources/sam.jpg" width="256">
         </td>
-        <td style="position:relative">
-            <a href="projects/spie2019.html">
-            <div class="w3-display-middle w3-center w3-light-grey w3-padding">
-                Cyclic Weight Transfer
-            </div>
-            <img src="/resources/spie2019.png" style="width:350px;vertical-align:middle">
-            </a>
-        </td>
-
-    </tr>
-  </table>
-
-  <!--
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-middle w3-center w3-light-grey w3-padding">MR Contrast Classification</div>
-        <a href="projects/spie2018.html">
-        <img src="/resources/spie2018.png" style="width:100%;vertical-align:middle" >
+    <td>
+        PhD Student at Johns Hopkins University
+        </br>
+        NSF Fellow
+        </br>
+        NIH Clinical Center Special Volunteer
+        </br>
+        </br>
+        Medical image processing | Super-resolution | Machine learning
+        </br>
+        [FULL FIRST NAME].[LAST NAME]@jhu.edu
+        </br>
+        <a href="resources/cv.pdf">
+            Download CV as PDF
         </a>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-middle w3-center w3-light-grey w3-padding">Cyclic Weight Transfer</div>
-        <a href="projects/spie2019.html">
-        <img src="/resources/spie2019.png" style="width:100%;vertical-align:middle" >
+        </br>
+        <a href="https://scholar.google.com/citations?user=H6TdLnoAAAAJ&hl=en" style="text-decoration: none">
+            <img src="resources/google_scholar.png" width="64">
         </a>
-      </div>
-    </div>
+        <a href="https://twitter.com/sam_remedios" style="text-decoration: none">
+            <img src="resources/twitter.png" width="64">
+        </a>
+    </td>
+</tr>
+</table>
 
-  </div>
-  -->
-  <!--
-  <div class="w3-row-padding">
-    <div class="column left">
-        <img class="w3-image" src="/resources/distr_spie_fig.png" alt="Inception-Based Architecture">
-    </div>
-    <div class="column right">
-       Machine learning models are becoming commonplace in the domain of medical imaging, and with these methods comes an ever-increasing need for more data. However, to preserve patient anonymity it is frequently impractical or prohibited to transfer protected health information (PHI) between institutions. Additionally, due to the nature of some studies, there may not be a large public dataset available on which to train models. To address this conundrum, we analyze the efficacy of transferring the model itself in lieu of data between different sites. By doing so we accomplish two goals: 1) the model gains access to training on a larger dataset that it could not normally obtain and 2) the model better generalizes, having trained on data from separate locations. In this paper, we implement multi-site learning with disparate datasets from the National Institutes of Health (NIH) and Vanderbilt University Medical Center (VUMC) without compromising PHI. Three neural networks are trained to convergence on a computed tomography (CT) brain hematoma segmentation task: one only with NIH data, one only with VUMC data, and one multi-site model alternating between NIH and VUMC data. Resultant lesion masks with the multi-site model attain an average Dice similarity coefficient of 0.64 and the automatically segmented hematoma volumes correlate to those done manually with a Pearson correlation coefficient of 0.87, corresponding to an 8% and 5% improvement, respectively, over the single-site model counterparts.</br>
-       <a href="https://doi.org/10.1117/12.2511997">https://doi.org/10.1117/12.2511997</a>
-    </div>
-  </div>
-    <div class="column left">
-        <img class="w3-image" src="/resources/phinet_fig.png" alt="Phinet Architecture">
-    </div>
-    <div class="column right">
-       Magnetic Resonance (MR) imaging allows the acquisition of images with different contrast properties depending on the acquisition protocol and the magnetic properties of tissues. Many MR brain image processing techniques, such as tissue segmentation, require multiple MR contrasts as inputs, and each contrast is treated differently. Thus it is advantageous to automate the identification of image contrasts for various purposes, such as facilitating image processing pipelines, and managing and maintaining large databases via content-based image retrieval (CBIR). Most automated CBIR techniques focus on a two-step process: extracting features from data and classifying the image based on these features. We present a novel 3D deep convolutional neural network (CNN)- based method for MR image contrast classification. The proposed CNN automatically identifies the MR contrast of an input brain image volume. Specifically, we explored three classification problems: (1) identify T1-weighted (T1-w), T2-weighted (T2-w), and fluid-attenuated inversion recovery (FLAIR) contrasts, (2) identify pre vs postcontrast T1, (3) identify pre vs post-contrast FLAIR. A total of 3418 image volumes acquired from multiple sites and multiple scanners were used. To evaluate each task, the proposed model was trained on 2137 images and tested on the remaining 1281 images. Results showed that image volumes were correctly classified with 97.57% accuracy. </br>
-       <a href="https://doi.org/10.1117/12.2293943">https://doi.org/10.1117/12.2293943</a>
-    </div>
-  </div>
-    -->
 
-  <!--
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Extracting 2D Features from 3D Volumes with Multiple Instance Learning</div>
-        <img src="/w3images/house5.jpg" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Hemorrhage Segmentation in CT after Traumatic Brain Injury</div>
-        <img src="/w3images/house2.jpg" style="width:100%">
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Contrast Classification</div>
-        <img src="/w3images/house2.jpg" style="width:100%">
-      </div>
-    </div>
-  </div>
-  -->
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>PhD Student at Johns Hopkins University</p>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>[FULL FIRST NAME].[LAST NAME]@jhu.edu</p>
-  </div>
-
-<!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16" w3-include-html="footer.html"></footer>
-
-<script>w3.includeHTML();</script>
 </body>
 </html>
