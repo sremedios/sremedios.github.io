@@ -1,0 +1,43 @@
+title: "Samuel W. Remedios"
+description: "PhD Student at Johns Hopkins University"
+baseurl: ""
+url: "https://sremedios.github.io"
+twitter_username: sam_remedios
+github_username:  sremedios
+
+# Build settings
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-feed
+
+author:
+  avatar   : "/assets/images/photo.jpg"
+  bio      : "PhD Student at Johns Hopkins University • NSF Fellow • NIH Clinical Center Special Volunteer"
+  twitter  : "sam_remedios"
+  email    : "samuel.remedios@jhu.edu"
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key will not be processed, unless
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      related: true
