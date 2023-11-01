@@ -6,5 +6,10 @@ author_profile: true
 ---
 
 # Journals 
+{% bibliography --file journal %}
 
-pull from yaml somehow
+# Conference Publications
+{% bibliography --file conf %}
+
+# Talks
+{% bibliography --file talks %}

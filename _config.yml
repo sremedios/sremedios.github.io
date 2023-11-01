@@ -11,6 +11,12 @@ minimal_mistakes_skin: "dark"
 
 plugins:
   - jekyll-feed
+  - jekyll-scholar
+
+scholar:
+  style: apa
+  source: ./assets/bib
+  bibliography: conf.bib
 
 author:
   avatar   : "/assets/images/photo.jpg"
