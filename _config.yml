@@ -1,0 +1,63 @@
+title: "Samuel W. Remedios"
+description: "PhD Student at Johns Hopkins University"
+baseurl: ""
+url: "https://sremedios.github.io"
+twitter_username: sam_remedios
+github_username:  sremedios
+
+# Build settings
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-feed
+  - jekyll-scholar
+
+scholar:
+  style: apa
+  source: ./assets/bib
+  bibliography: conf.bib
+
+author:
+  avatar   : "/assets/images/photo.jpg"
+  bio      : "PhD Student at Johns Hopkins University • NSF Fellow • NIH Clinical Center Special Volunteer"
+  links:
+    - label : "Scholar"
+      icon  : "fas fa-fw fa-graduation-cap"
+      url   : "https://scholar.google.com/citations?user=H6TdLnoAAAAJ&hl=en"
+    - label : "Twitter"
+      icon  : "fab fa-fw fa-twitter"
+      url   : "https://twitter.com/sam_remedios"
+    - label : "GitHub"
+      icon  : "fab fa-fw fa-github"
+      url   : "https://github.com/sremedios"
+    - label : "IACL GitLab"
+      icon  : "fab fa-fw fa-gitlab"
+      url   : "https://gitlab.com/iacl"
+    - label : "Email"
+      icon  : "fas fa-fw fa-envelope"
+      url   : "https://gitlab.com/iacl"
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key will not be processed, unless
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      related: false
