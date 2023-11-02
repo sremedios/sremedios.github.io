@@ -1,5 +1,2 @@
 # Ignore temporary vim swap files
 *.swp
-
-# Ignore Jekyll _site directory
-_site/
