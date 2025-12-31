@@ -29,5 +29,8 @@ latest_posts:
 
 I am striving for medical image ubiquity.
 I believe that access to medical imaging scanners should be as universal as access to thermometers.
+My training in medical image analysis and processing sets me up to contribute to the software and algorithms side of this vision.
 Towards this, I am passionate about medical image restoration, harmonization, representation, and robust analysis.
+
 Recent developments in generative AI have opened up opportunities in addressing these tasks, but there is still work to be done to provide guarantees around this new technology.
+Getting this right is going to require expertise at the intersection of hardware and software for all medical imaging modalities, physics, signal processing, mathematics, and AI.
