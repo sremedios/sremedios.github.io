@@ -13,7 +13,6 @@ profile:
     <p>3400 North Charles Street</p>
     <p>Baltimore, MD 21218, USA</p>
 
-
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
@@ -48,4 +47,3 @@ My previous work on super-resolution [1, 2, 3] and large-scale generative model 
 This vision demands innovations in generative modeling, optimization, and algorithmic reliability that extend well beyond healthcare.
 My lab will contribute to core areas of computer science, including machine learning, optimization, computer vision, and explainable AI, while advancing our understanding of how learned models can interact with physical systems.
 The resulting frameworks have the potential to standardize medical imaging across scanners, improve access to low-cost and portable imaging, and enable diagnostic AI systems that are trustworthy, generalizable, and aligned with clinical needs.
-
