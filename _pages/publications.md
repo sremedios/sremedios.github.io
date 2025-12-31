@@ -16,7 +16,7 @@ nav_order: 2
 <div class="publications">
 
 <h2>Journal Articles</h2>
-{% bibliography -f journals %}
+{% bibliography -f journal %}
 
 <h2>Conference Papers</h2>
 {% bibliography -f conf %}
