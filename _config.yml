@@ -184,8 +184,10 @@ exclude:
   - lighthouse_results/
   - _pages/books.md
   - _pages/blog.md
+  - _pages/cv.md
   - _pages/dropdown.md
   - _pages/profiles.md
+  - _pages/projects.md
   - _pages/repositories.md
   - _pages/teaching.md
   - _posts/
@@ -268,7 +270,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  first_name: [Samuel, S., Samuel W., S. W.]
+  first_name: [Samuel, S., Samuel W., S. W., Samuel W]
   last_name: [Remedios]
 
   style: apa
