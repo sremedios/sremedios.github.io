@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-01-05'
+  last_updated: '2026-01-09'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
-    citations: 1
+    citations: 0
     title: 'Beyond MR Image Harmonization: Resolution Matters Too'
     year: '2024'
   H6TdLnoAAAAJ:0EnyYjriUFMC:
@@ -18,7 +18,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 43
+    citations: 44
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -58,7 +58,7 @@ papers:
     title: Self-Supervised Super-Resolution of 2D Pre-clinical MRI Acquisitions
     year: '2024'
   H6TdLnoAAAAJ:JV2RwH3_ST0C:
-    citations: 2
+    citations: 3
     title: An Evaluation of Image-Based and Statistical Techniques for Harmonizing Brain Volume Measurements
     year: '2025'
   H6TdLnoAAAAJ:J_g5lzvAfSwC:
@@ -146,7 +146,7 @@ papers:
     title: Automatic classification of MRI contrasts using a deep Siamese network and one-shot learning
     year: '2022'
   H6TdLnoAAAAJ:W7OEmFMy1HYC:
-    citations: 96
+    citations: 95
     title: "Brain connections derived from diffusion MRI tractography can be highly anatomically accurate\u2014if we know where white matter pathways start, where they end, and where they do \u2026"
     year: '2020'
   H6TdLnoAAAAJ:WF5omc3nYNoC:
@@ -174,7 +174,7 @@ papers:
     title: Federated gradient averaging for multi-site training with momentum-based optimizers
     year: '2020'
   H6TdLnoAAAAJ:ZeXyd9-uunAC:
-    citations: 4
+    citations: 5
     title: Pushing the limits of zero-shot self-supervised super-resolution of anisotropic MR images
     year: '2024'
   H6TdLnoAAAAJ:Zph67rFs4hoC:
@@ -238,7 +238,7 @@ papers:
     title: Medical image super-resolution with
     year: '2022'
   H6TdLnoAAAAJ:isC4tDSrTZIC:
-    citations: 1
+    citations: 2
     title: 'ECLARE: Efficient cross-planar learning for anisotropic resolution enhancement'
     year: '2025'
   H6TdLnoAAAAJ:j3f4tGmQtD8C:
