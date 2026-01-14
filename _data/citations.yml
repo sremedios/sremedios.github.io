@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-09'
+  last_updated: '2026-01-14'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -18,7 +18,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 44
+    citations: 45
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -66,7 +66,7 @@ papers:
     title: Diffusion-Driven Generation of Minimally Preprocessed Brain MRI
     year: '2025'
   H6TdLnoAAAAJ:KlAtU1dfN6UC:
-    citations: 9
+    citations: 10
     title: Bi-directional synthesis of pre-and post-contrast mri via guided feature disentanglement
     year: '2022'
   H6TdLnoAAAAJ:L8Ckcad2t8MC:
@@ -111,7 +111,7 @@ papers:
     year: '2024'
   H6TdLnoAAAAJ:RGFaLdJalmkC:
     citations: 1
-    title: 'MSRepaint: Multiple Sclerosis Repaint with Conditional Denoising Diffusion Implicit Model for Bidirectional Lesion Filling and Synthesis'
+    title: 'Msrepaint: Multiple sclerosis repaint with conditional denoising diffusion implicit model for bidirectional lesion filling and synthesis'
     year: '2025'
   H6TdLnoAAAAJ:RHpTSmoSYBkC:
     citations: 0
@@ -226,7 +226,7 @@ papers:
     title: Influence of early through late fusion on pancreas segmentation from imperfectly registered multimodal magnetic resonance imaging
     year: '2025'
   H6TdLnoAAAAJ:hMod-77fHWUC:
-    citations: 2
+    citations: 1
     title: 'UNISELF: A Unified Network with Instance Normalization and Self-Ensembled Lesion Fusion for Multiple Sclerosis Lesion Segmentation'
     year: '2025'
   H6TdLnoAAAAJ:hqOjcs7Dif8C:
@@ -238,7 +238,7 @@ papers:
     title: Medical image super-resolution with
     year: '2022'
   H6TdLnoAAAAJ:isC4tDSrTZIC:
-    citations: 2
+    citations: 1
     title: 'ECLARE: Efficient cross-planar learning for anisotropic resolution enhancement'
     year: '2025'
   H6TdLnoAAAAJ:j3f4tGmQtD8C:
@@ -290,9 +290,13 @@ papers:
     title: Classifying magnetic resonance image modalities with convolutional neural networks
     year: '2018'
   H6TdLnoAAAAJ:ufrVoPGSRksC:
-    citations: 12
+    citations: 13
     title: Comparison of convolutional neural networks for detecting large vessel occlusion on computed tomography angiography
     year: '2021'
+  H6TdLnoAAAAJ:vV6vV6tmYwMC:
+    citations: 0
+    title: THROUGH-PLANE SUPER-RESOLUTION OF ANISOTROPIC MULTI-SLICE MAGNETIC RESONANCE IMAGES
+    year: '2025'
   H6TdLnoAAAAJ:zYLM7Y9cAGgC:
     citations: 41
     title: Distributed deep learning across multisite datasets for generalized CT hemorrhage segmentation
