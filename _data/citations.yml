@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-14'
+  last_updated: '2026-01-19'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -13,12 +13,16 @@ papers:
     citations: 1
     title: Learning 3D White Matter Microstructure from 2D Histology
     year: '2019'
+  H6TdLnoAAAAJ:35N4QoGY0k4C:
+    citations: 0
+    title: 'Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols'
+    year: '2026'
   H6TdLnoAAAAJ:3fE2CSJIrl8C:
     citations: 10
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 45
+    citations: 49
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -29,8 +33,12 @@ papers:
     citations: 0
     title: 'Deep learning 3D white matter fiber orientation from 2D histology: pulling 3D rabbits out of 2D hats'
     year: Unknown Year
+  H6TdLnoAAAAJ:70eg2SAEIzsC:
+    citations: 0
+    title: 'The TRaditional versus Early Aggressive Therapy for MS (TREAT-MS) trial: design and baseline participant characteristics'
+    year: '2025'
   H6TdLnoAAAAJ:7PzlFSSx8tAC:
-    citations: 1
+    citations: 2
     title: Super-resolution multi-contrast unbiased eye atlases with deep probabilistic refinement
     year: '2024'
   H6TdLnoAAAAJ:9ZlFYXVOiuMC:
@@ -42,9 +50,9 @@ papers:
     title: Harmonizing 1.5 T/3T diffusion weighted MRI through development of deep learning stabilized microarchitecture estimators
     year: '2019'
   H6TdLnoAAAAJ:BqipwSGYUEgC:
-    citations: 0
+    citations: 1
     title: 'Rescuing Incomplete MR Data: Anatomy Imputation of Restricted Field of View Images Using Multi-Contrast MR Images'
-    year: Unknown Year
+    year: '2025'
   H6TdLnoAAAAJ:GnPB-g6toBAC:
     citations: 0
     title: 'Accelerating Multi-parametric MRI Sequences Using Learned Acquisition and Reconstruction Optimization (LARO): A Retrospective Study'
@@ -58,7 +66,7 @@ papers:
     title: Self-Supervised Super-Resolution of 2D Pre-clinical MRI Acquisitions
     year: '2024'
   H6TdLnoAAAAJ:JV2RwH3_ST0C:
-    citations: 3
+    citations: 4
     title: An Evaluation of Image-Based and Statistical Techniques for Harmonizing Brain Volume Measurements
     year: '2025'
   H6TdLnoAAAAJ:J_g5lzvAfSwC:
@@ -102,7 +110,7 @@ papers:
     title: Unsupervised OCT image interpolation using deformable registration and generative models
     year: '2025'
   H6TdLnoAAAAJ:QIV2ME_5wuYC:
-    citations: 12
+    citations: 13
     title: Towards an accurate and generalizable multiple sclerosis lesion segmentation model using self-ensembled lesion fusion
     year: '2024'
   H6TdLnoAAAAJ:R3hNpaxXUhUC:
@@ -154,7 +162,7 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 23
+    citations: 24
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
@@ -226,7 +234,7 @@ papers:
     title: Influence of early through late fusion on pancreas segmentation from imperfectly registered multimodal magnetic resonance imaging
     year: '2025'
   H6TdLnoAAAAJ:hMod-77fHWUC:
-    citations: 1
+    citations: 2
     title: 'UNISELF: A Unified Network with Instance Normalization and Self-Ensembled Lesion Fusion for Multiple Sclerosis Lesion Segmentation'
     year: '2025'
   H6TdLnoAAAAJ:hqOjcs7Dif8C:
@@ -238,11 +246,11 @@ papers:
     title: Medical image super-resolution with
     year: '2022'
   H6TdLnoAAAAJ:isC4tDSrTZIC:
-    citations: 1
+    citations: 2
     title: 'ECLARE: Efficient cross-planar learning for anisotropic resolution enhancement'
     year: '2025'
   H6TdLnoAAAAJ:j3f4tGmQtD8C:
-    citations: 0
+    citations: 1
     title: An Unsupervised Approach for Artifact Severity Scoring in Multi-Contrast MR Images
     year: '2025'
   H6TdLnoAAAAJ:kNdYIx-mwKoC:
