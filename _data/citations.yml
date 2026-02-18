@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-28'
+  last_updated: '2026-02-18'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -14,7 +14,7 @@ papers:
     title: Likelihood-Separable Diffusion Inference for Multi-Image MRI Super-Resolution
     year: '2026'
   H6TdLnoAAAAJ:2osOgNQ5qMEC:
-    citations: 1
+    citations: 0
     title: Learning 3D White Matter Microstructure from 2D Histology
     year: '2019'
   H6TdLnoAAAAJ:35N4QoGY0k4C:
@@ -42,7 +42,7 @@ papers:
     title: 'The TRaditional versus Early Aggressive Therapy for MS (TREAT-MS) trial: design and baseline participant characteristics'
     year: '2025'
   H6TdLnoAAAAJ:7PzlFSSx8tAC:
-    citations: 2
+    citations: 3
     title: Super-resolution multi-contrast unbiased eye atlases with deep probabilistic refinement
     year: '2024'
   H6TdLnoAAAAJ:9ZlFYXVOiuMC:
@@ -50,7 +50,7 @@ papers:
     title: No ultrasounds detected from fungi when dehydrated
     year: '2023'
   H6TdLnoAAAAJ:9yKSN-GCB0IC:
-    citations: 12
+    citations: 11
     title: Harmonizing 1.5 T/3T diffusion weighted MRI through development of deep learning stabilized microarchitecture estimators
     year: '2019'
   H6TdLnoAAAAJ:BqipwSGYUEgC:
@@ -71,14 +71,14 @@ papers:
     year: '2024'
   H6TdLnoAAAAJ:JV2RwH3_ST0C:
     citations: 4
-    title: An Evaluation of Image-Based and Statistical Techniques for Harmonizing Brain Volume Measurements
+    title: An evaluation of image-based and statistical techniques for harmonizing brain volume measurements
     year: '2025'
   H6TdLnoAAAAJ:J_g5lzvAfSwC:
     citations: 1
     title: Diffusion-Driven Generation of Minimally Preprocessed Brain MRI
     year: '2025'
   H6TdLnoAAAAJ:KlAtU1dfN6UC:
-    citations: 10
+    citations: 11
     title: Bi-directional synthesis of pre-and post-contrast mri via guided feature disentanglement
     year: '2022'
   H6TdLnoAAAAJ:L8Ckcad2t8MC:
@@ -118,8 +118,8 @@ papers:
     title: Towards an accurate and generalizable multiple sclerosis lesion segmentation model using self-ensembled lesion fusion
     year: '2024'
   H6TdLnoAAAAJ:R3hNpaxXUhUC:
-    citations: 1
-    title: 'TS-SR3: Time-Strided Denoising Diffusion Probabilistic Model for MR Super-Resolution'
+    citations: 2
+    title: 'TS-SR3: Time-strided denoising diffusion probabilistic model for MR super-resolution'
     year: '2024'
   H6TdLnoAAAAJ:RGFaLdJalmkC:
     citations: 1
@@ -134,7 +134,7 @@ papers:
     title: 'CATNUS: Coordinate-Aware Thalamic Nuclei Segmentation Using T1-Weighted MRI'
     year: '2025'
   H6TdLnoAAAAJ:Se3iqnhoufwC:
-    citations: 25
+    citations: 24
     title: Automated classification of resting-state fMRI ICA components using a deep Siamese network
     year: '2022'
   H6TdLnoAAAAJ:TFP_iSt0sucC:
@@ -150,7 +150,7 @@ papers:
     title: Extracting 2D weak labels from volume labels using multiple instance learning in CT hemorrhage detection
     year: '2020'
   H6TdLnoAAAAJ:ULOm3_A8WrAC:
-    citations: 11
+    citations: 10
     title: 'ESPRESO: An algorithm to estimate the slice profile of a single magnetic resonance image'
     year: '2023'
   H6TdLnoAAAAJ:UebtZRa9Y70C:
@@ -158,7 +158,7 @@ papers:
     title: Automatic classification of MRI contrasts using a deep Siamese network and one-shot learning
     year: '2022'
   H6TdLnoAAAAJ:W7OEmFMy1HYC:
-    citations: 95
+    citations: 99
     title: "Brain connections derived from diffusion MRI tractography can be highly anatomically accurate\u2014if we know where white matter pathways start, where they end, and where they do \u2026"
     year: '2020'
   H6TdLnoAAAAJ:WF5omc3nYNoC:
@@ -166,11 +166,11 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 25
+    citations: 26
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
-    citations: 16
+    citations: 17
     title: Generalizing deep whole brain segmentation for pediatric and post-contrast MRI with augmented transfer learning
     year: '2020'
   H6TdLnoAAAAJ:YFjsv_pBGBYC:
@@ -182,7 +182,7 @@ papers:
     title: Characteristics for Machine Learning Detection of Large Vessel Occlusion on Computed Tomography Angiography
     year: '2023'
   H6TdLnoAAAAJ:YsMSGLbcyi4C:
-    citations: 28
+    citations: 27
     title: Federated gradient averaging for multi-site training with momentum-based optimizers
     year: '2020'
   H6TdLnoAAAAJ:ZeXyd9-uunAC:
@@ -190,7 +190,7 @@ papers:
     title: Pushing the limits of zero-shot self-supervised super-resolution of anisotropic MR images
     year: '2024'
   H6TdLnoAAAAJ:Zph67rFs4hoC:
-    citations: 36
+    citations: 35
     title: Enlarged perivascular space burden associations with arterial stiffness and cognition
     year: '2023'
   H6TdLnoAAAAJ:_FxGoFyzp5QC:
@@ -210,7 +210,7 @@ papers:
     title: 'Inconsistent MR Acquisition in Longitudinal Volumetric Analysis: Impacts and Solutions'
     year: '2023'
   H6TdLnoAAAAJ:bEWYMUwI8FkC:
-    citations: 9
+    citations: 6
     title: International Conference on Medical Image Computing and Computer-Assisted Intervention
     year: '2006'
   H6TdLnoAAAAJ:blknAaTinKkC:
@@ -222,7 +222,7 @@ papers:
     title: Distributed deep learning for robust multi-site segmentation of CT imaging after traumatic brain injury
     year: '2019'
   H6TdLnoAAAAJ:dhFuZR0502QC:
-    citations: 6
+    citations: 7
     title: 'AniRes2D: anisotropic residual-enhanced diffusion for 2D MR super-resolution'
     year: '2024'
   H6TdLnoAAAAJ:eQOLeE2rZwMC:
@@ -234,12 +234,12 @@ papers:
     title: Data-driven nucleus subclassification on colon hematoxylin and eosin using style-transferred digital pathology
     year: '2024'
   H6TdLnoAAAAJ:hFOr9nPyWt4C:
-    citations: 5
+    citations: 4
     title: Influence of early through late fusion on pancreas segmentation from imperfectly registered multimodal magnetic resonance imaging
     year: '2025'
   H6TdLnoAAAAJ:hMod-77fHWUC:
     citations: 2
-    title: 'Uniself: A unified network with instance normalization and self-ensembled lesion fusion for multiple sclerosis lesion segmentation'
+    title: 'UNISELF: A unified network with instance normalization and self-ensembled lesion fusion for multiple sclerosis lesion segmentation'
     year: '2026'
   H6TdLnoAAAAJ:hqOjcs7Dif8C:
     citations: 6
@@ -251,7 +251,7 @@ papers:
     year: '2022'
   H6TdLnoAAAAJ:isC4tDSrTZIC:
     citations: 2
-    title: 'ECLARE: Efficient cross-planar learning for anisotropic resolution enhancement'
+    title: 'ECLARE: efficient cross-planar learning for anisotropic resolution enhancement'
     year: '2025'
   H6TdLnoAAAAJ:j3f4tGmQtD8C:
     citations: 1
@@ -265,9 +265,13 @@ papers:
     citations: 0
     title: The Importance of Super-Resolution and Harmonization in a Pragmatic Clinical MR Image Dataset
     year: '2025'
+  H6TdLnoAAAAJ:ldfaerwXgEUC:
+    citations: 0
+    title: Improving MR Image Harmonization for Clinical and Research Applications in Multiple Sclerosis
+    year: '2025'
   H6TdLnoAAAAJ:mB3voiENLucC:
     citations: 4
-    title: Super-Resolution in Clinically Available Spinal Cord MRIs Enables Automated Atrophy Analysis
+    title: Super-resolution in clinically available spinal cord MRIs enables automated atrophy analysis
     year: '2025'
   H6TdLnoAAAAJ:mVmsd5A6BfQC:
     citations: 12
@@ -298,7 +302,7 @@ papers:
     title: Inter-scanner harmonization of high angular resolution DW-MRI using null space deep learning
     year: '2019'
   H6TdLnoAAAAJ:u5HHmVD_uO8C:
-    citations: 32
+    citations: 31
     title: Classifying magnetic resonance image modalities with convolutional neural networks
     year: '2018'
   H6TdLnoAAAAJ:ufrVoPGSRksC:
