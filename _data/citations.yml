@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-18'
+  last_updated: '2026-03-02'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -26,7 +26,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 50
+    citations: 52
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -103,7 +103,7 @@ papers:
     year: '2022'
   H6TdLnoAAAAJ:NMxIlDl6LWMC:
     citations: 1
-    title: 'Segmenting Thalamic Nuclei: T1 Maps Provide a Reliable and Efficient Solution'
+    title: 'Segmenting Thalamic Nuclei:  Maps Provide a Reliable and Efficient Solution'
     year: '2025'
   H6TdLnoAAAAJ:NaGl4SEjCO4C:
     citations: 0
@@ -158,7 +158,7 @@ papers:
     title: Automatic classification of MRI contrasts using a deep Siamese network and one-shot learning
     year: '2022'
   H6TdLnoAAAAJ:W7OEmFMy1HYC:
-    citations: 99
+    citations: 100
     title: "Brain connections derived from diffusion MRI tractography can be highly anatomically accurate\u2014if we know where white matter pathways start, where they end, and where they do \u2026"
     year: '2020'
   H6TdLnoAAAAJ:WF5omc3nYNoC:
@@ -190,7 +190,7 @@ papers:
     title: Pushing the limits of zero-shot self-supervised super-resolution of anisotropic MR images
     year: '2024'
   H6TdLnoAAAAJ:Zph67rFs4hoC:
-    citations: 35
+    citations: 36
     title: Enlarged perivascular space burden associations with arterial stiffness and cognition
     year: '2023'
   H6TdLnoAAAAJ:_FxGoFyzp5QC:
@@ -234,7 +234,7 @@ papers:
     title: Data-driven nucleus subclassification on colon hematoxylin and eosin using style-transferred digital pathology
     year: '2024'
   H6TdLnoAAAAJ:hFOr9nPyWt4C:
-    citations: 4
+    citations: 5
     title: Influence of early through late fusion on pancreas segmentation from imperfectly registered multimodal magnetic resonance imaging
     year: '2025'
   H6TdLnoAAAAJ:hMod-77fHWUC:
