@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-02'
+  last_updated: '2026-03-09'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -26,7 +26,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 52
+    citations: 55
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -74,7 +74,7 @@ papers:
     title: An evaluation of image-based and statistical techniques for harmonizing brain volume measurements
     year: '2025'
   H6TdLnoAAAAJ:J_g5lzvAfSwC:
-    citations: 1
+    citations: 2
     title: Diffusion-Driven Generation of Minimally Preprocessed Brain MRI
     year: '2025'
   H6TdLnoAAAAJ:KlAtU1dfN6UC:
@@ -89,8 +89,12 @@ papers:
     citations: 1
     title: Perivascular space volumes relate to arterial stiffness and cognition
     year: '2021'
+  H6TdLnoAAAAJ:M05iB0D1s5AC:
+    citations: 0
+    title: Solving a Nonlinear Blind Inverse Problem for Tagged MRI with Physics and Deep Generative Priors
+    year: '2026'
   H6TdLnoAAAAJ:M3NEmzRMIkIC:
-    citations: 1
+    citations: 2
     title: Brightness-invariant tracking estimation in tagged MRI
     year: '2025'
   H6TdLnoAAAAJ:M3ejUd6NZC8C:
@@ -114,7 +118,7 @@ papers:
     title: Unsupervised OCT image interpolation using deformable registration and generative models
     year: '2025'
   H6TdLnoAAAAJ:QIV2ME_5wuYC:
-    citations: 14
+    citations: 15
     title: Towards an accurate and generalizable multiple sclerosis lesion segmentation model using self-ensembled lesion fusion
     year: '2024'
   H6TdLnoAAAAJ:R3hNpaxXUhUC:
@@ -138,7 +142,7 @@ papers:
     title: Automated classification of resting-state fMRI ICA components using a deep Siamese network
     year: '2022'
   H6TdLnoAAAAJ:TFP_iSt0sucC:
-    citations: 2
+    citations: 3
     title: The relationship of white matter tract orientation to vascular geometry in the human brain
     year: '2025'
   H6TdLnoAAAAJ:TQgYirikUcIC:
@@ -150,7 +154,7 @@ papers:
     title: Extracting 2D weak labels from volume labels using multiple instance learning in CT hemorrhage detection
     year: '2020'
   H6TdLnoAAAAJ:ULOm3_A8WrAC:
-    citations: 10
+    citations: 12
     title: 'ESPRESO: An algorithm to estimate the slice profile of a single magnetic resonance image'
     year: '2023'
   H6TdLnoAAAAJ:UebtZRa9Y70C:
@@ -166,7 +170,7 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 26
+    citations: 27
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
@@ -252,7 +256,7 @@ papers:
   H6TdLnoAAAAJ:isC4tDSrTZIC:
     citations: 2
     title: 'ECLARE: efficient cross-planar learning for anisotropic resolution enhancement'
-    year: '2025'
+    year: '2026'
   H6TdLnoAAAAJ:j3f4tGmQtD8C:
     citations: 1
     title: An Unsupervised Approach for Artifact Severity Scoring in Multi-Contrast MR Images
