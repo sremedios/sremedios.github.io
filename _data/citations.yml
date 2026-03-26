@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-18'
+  last_updated: '2026-03-11'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -62,7 +62,7 @@ papers:
     title: 'Accelerating Multi-parametric MRI Sequences Using Learned Acquisition and Reconstruction Optimization (LARO): A Retrospective Study'
     year: Unknown Year
   H6TdLnoAAAAJ:HDshCWvjkbEC:
-    citations: 6
+    citations: 5
     title: Bi-directional MS lesion filling and synthesis using denoising diffusion implicit model-based lesion repainting
     year: '2025'
   H6TdLnoAAAAJ:IWHjjKOFINEC:
@@ -174,7 +174,7 @@ papers:
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
-    citations: 18
+    citations: 17
     title: Generalizing deep whole brain segmentation for pediatric and post-contrast MRI with augmented transfer learning
     year: '2020'
   H6TdLnoAAAAJ:YFjsv_pBGBYC:
@@ -310,7 +310,7 @@ papers:
     title: Classifying magnetic resonance image modalities with convolutional neural networks
     year: '2018'
   H6TdLnoAAAAJ:ufrVoPGSRksC:
-    citations: 14
+    citations: 13
     title: Comparison of convolutional neural networks for detecting large vessel occlusion on computed tomography angiography
     year: '2021'
   H6TdLnoAAAAJ:vV6vV6tmYwMC:
