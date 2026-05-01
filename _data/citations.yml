@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-04-08'
+  last_updated: '2026-05-01'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
-    citations: 0
+    citations: 1
     title: 'Beyond MR Image Harmonization: Resolution Matters Too'
     year: '2024'
   H6TdLnoAAAAJ:0EnyYjriUFMC:
@@ -18,7 +18,7 @@ papers:
     title: Learning 3D White Matter Microstructure from 2D Histology
     year: '2019'
   H6TdLnoAAAAJ:35N4QoGY0k4C:
-    citations: 0
+    citations: 1
     title: 'Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols'
     year: '2026'
   H6TdLnoAAAAJ:3fE2CSJIrl8C:
@@ -26,7 +26,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 59
+    citations: 63
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -62,7 +62,7 @@ papers:
     title: 'Accelerating Multi-parametric MRI Sequences Using Learned Acquisition and Reconstruction Optimization (LARO): A Retrospective Study'
     year: Unknown Year
   H6TdLnoAAAAJ:HDshCWvjkbEC:
-    citations: 7
+    citations: 8
     title: Bi-directional MS lesion filling and synthesis using denoising diffusion implicit model-based lesion repainting
     year: '2025'
   H6TdLnoAAAAJ:IWHjjKOFINEC:
@@ -70,19 +70,19 @@ papers:
     title: Self-Supervised Super-Resolution of 2D Pre-clinical MRI Acquisitions
     year: '2024'
   H6TdLnoAAAAJ:JV2RwH3_ST0C:
-    citations: 5
+    citations: 6
     title: An evaluation of image-based and statistical techniques for harmonizing brain volume measurements
     year: '2025'
   H6TdLnoAAAAJ:J_g5lzvAfSwC:
-    citations: 2
+    citations: 3
     title: Diffusion-Driven Generation of Minimally Preprocessed Brain MRI
     year: '2025'
   H6TdLnoAAAAJ:KlAtU1dfN6UC:
-    citations: 12
+    citations: 13
     title: Bi-directional synthesis of pre-and post-contrast mri via guided feature disentanglement
     year: '2022'
   H6TdLnoAAAAJ:L8Ckcad2t8MC:
-    citations: 3
+    citations: 4
     title: Nucleus subtype classification using inter-modality learning
     year: '2024'
   H6TdLnoAAAAJ:LkGwnXOMwfcC:
@@ -114,15 +114,15 @@ papers:
     title: "Optical Coherence Tomography Harmonization with Anatomy-Guided Latent Metric Schr\xF6dinger Bridges"
     year: Unknown Year
   H6TdLnoAAAAJ:O3NaXMp0MMsC:
-    citations: 2
+    citations: 3
     title: Unsupervised OCT image interpolation using deformable registration and generative models
     year: '2025'
   H6TdLnoAAAAJ:QIV2ME_5wuYC:
-    citations: 16
+    citations: 17
     title: Towards an accurate and generalizable multiple sclerosis lesion segmentation model using self-ensembled lesion fusion
     year: '2024'
   H6TdLnoAAAAJ:R3hNpaxXUhUC:
-    citations: 2
+    citations: 3
     title: 'TS-SR3: Time-strided denoising diffusion probabilistic model for MR super-resolution'
     year: '2024'
   H6TdLnoAAAAJ:RGFaLdJalmkC:
@@ -142,7 +142,7 @@ papers:
     title: Automated classification of resting-state fMRI ICA components using a deep Siamese network
     year: '2022'
   H6TdLnoAAAAJ:TFP_iSt0sucC:
-    citations: 2
+    citations: 4
     title: The relationship of white matter tract orientation to vascular geometry in the human brain
     year: '2025'
   H6TdLnoAAAAJ:TQgYirikUcIC:
@@ -162,7 +162,7 @@ papers:
     title: Automatic classification of MRI contrasts using a deep Siamese network and one-shot learning
     year: '2022'
   H6TdLnoAAAAJ:W7OEmFMy1HYC:
-    citations: 101
+    citations: 102
     title: "Brain connections derived from diffusion MRI tractography can be highly anatomically accurate\u2014if we know where white matter pathways start, where they end, and where they do \u2026"
     year: '2020'
   H6TdLnoAAAAJ:WF5omc3nYNoC:
@@ -170,7 +170,7 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 27
+    citations: 29
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
@@ -194,7 +194,7 @@ papers:
     title: Pushing the limits of zero-shot self-supervised super-resolution of anisotropic MR images
     year: '2024'
   H6TdLnoAAAAJ:Zph67rFs4hoC:
-    citations: 37
+    citations: 38
     title: Enlarged perivascular space burden associations with arterial stiffness and cognition
     year: '2023'
   H6TdLnoAAAAJ:_FxGoFyzp5QC:
@@ -218,7 +218,7 @@ papers:
     title: International Conference on Medical Image Computing and Computer-Assisted Intervention
     year: '2006'
   H6TdLnoAAAAJ:blknAaTinKkC:
-    citations: 0
+    citations: 1
     title: Data-driven Nucleus Subclassification on Colon H&E using Style-transferred Digital Pathology
     year: '2024'
   H6TdLnoAAAAJ:d1gkVwhDpl0C:
@@ -226,7 +226,7 @@ papers:
     title: Distributed deep learning for robust multi-site segmentation of CT imaging after traumatic brain injury
     year: '2019'
   H6TdLnoAAAAJ:dhFuZR0502QC:
-    citations: 7
+    citations: 8
     title: 'AniRes2D: anisotropic residual-enhanced diffusion for 2D MR super-resolution'
     year: '2024'
   H6TdLnoAAAAJ:eQOLeE2rZwMC:
@@ -258,11 +258,11 @@ papers:
     title: Medical image super-resolution with
     year: '2022'
   H6TdLnoAAAAJ:isC4tDSrTZIC:
-    citations: 3
+    citations: 4
     title: 'ECLARE: efficient cross-planar learning for anisotropic resolution enhancement'
     year: '2026'
   H6TdLnoAAAAJ:j3f4tGmQtD8C:
-    citations: 1
+    citations: 2
     title: An Unsupervised Approach for Artifact Severity Scoring in Multi-Contrast MR Images
     year: '2025'
   H6TdLnoAAAAJ:kNdYIx-mwKoC:
@@ -282,7 +282,7 @@ papers:
     title: Super-resolution in clinically available spinal cord MRIs enables automated atrophy analysis
     year: '2025'
   H6TdLnoAAAAJ:mVmsd5A6BfQC:
-    citations: 12
+    citations: 13
     title: Harmonization-enriched domain adaptation with light fine-tuning for multiple sclerosis lesion segmentation
     year: '2024'
   H6TdLnoAAAAJ:maZDTaKrznsC:
