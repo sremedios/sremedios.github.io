@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-27'
+  last_updated: '2026-06-03'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 2
@@ -26,7 +26,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 65
+    citations: 67
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -74,7 +74,7 @@ papers:
     title: Self-Supervised Super-Resolution of 2D Pre-clinical MRI Acquisitions
     year: '2024'
   H6TdLnoAAAAJ:JV2RwH3_ST0C:
-    citations: 6
+    citations: 7
     title: An evaluation of image-based and statistical techniques for harmonizing brain volume measurements
     year: '2025'
   H6TdLnoAAAAJ:J_g5lzvAfSwC:
@@ -150,7 +150,7 @@ papers:
     title: 'The Impact of Site Variability on Volumetric Analysis in a Multi-Site MRI Dataset: A Case for Image Harmonization'
     year: '2026'
   H6TdLnoAAAAJ:TFP_iSt0sucC:
-    citations: 4
+    citations: 5
     title: The relationship of white matter tract orientation to vascular geometry in the human brain
     year: '2025'
   H6TdLnoAAAAJ:TQgYirikUcIC:
@@ -162,7 +162,7 @@ papers:
     title: Extracting 2D weak labels from volume labels using multiple instance learning in CT hemorrhage detection
     year: '2020'
   H6TdLnoAAAAJ:ULOm3_A8WrAC:
-    citations: 14
+    citations: 15
     title: 'ESPRESO: An algorithm to estimate the slice profile of a single magnetic resonance image'
     year: '2023'
   H6TdLnoAAAAJ:UebtZRa9Y70C:
@@ -178,7 +178,7 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 32
+    citations: 33
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
