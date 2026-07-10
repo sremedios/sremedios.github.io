@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-10'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
-    citations: 1
+    citations: 2
     title: 'Beyond MR Image Harmonization: Resolution Matters Too'
     year: '2024'
   H6TdLnoAAAAJ:0EnyYjriUFMC:
@@ -26,7 +26,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 68
+    citations: 70
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -150,7 +150,7 @@ papers:
     title: 'The Impact of Site Variability on Volumetric Analysis in a Multi-Site MRI Dataset: A Case for Image Harmonization'
     year: '2026'
   H6TdLnoAAAAJ:TFP_iSt0sucC:
-    citations: 5
+    citations: 6
     title: The relationship of white matter tract orientation to vascular geometry in the human brain
     year: '2025'
   H6TdLnoAAAAJ:TQgYirikUcIC:
@@ -162,7 +162,7 @@ papers:
     title: Extracting 2D weak labels from volume labels using multiple instance learning in CT hemorrhage detection
     year: '2020'
   H6TdLnoAAAAJ:ULOm3_A8WrAC:
-    citations: 13
+    citations: 14
     title: 'ESPRESO: An algorithm to estimate the slice profile of a single magnetic resonance image'
     year: '2023'
   H6TdLnoAAAAJ:UebtZRa9Y70C:
@@ -178,7 +178,7 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 34
+    citations: 35
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
@@ -206,7 +206,7 @@ papers:
     title: Pushing the limits of zero-shot self-supervised super-resolution of anisotropic MR images
     year: '2024'
   H6TdLnoAAAAJ:Zph67rFs4hoC:
-    citations: 39
+    citations: 40
     title: Enlarged perivascular space burden associations with arterial stiffness and cognition
     year: '2023'
   H6TdLnoAAAAJ:_FxGoFyzp5QC:
@@ -250,7 +250,7 @@ papers:
     title: Optical coherence tomography harmonization via dual diffusion implicit bridges
     year: '2026'
   H6TdLnoAAAAJ:hC7cP41nSMkC:
-    citations: 1
+    citations: 2
     title: Data-driven nucleus subclassification on colon hematoxylin and eosin using style-transferred digital pathology
     year: '2024'
   H6TdLnoAAAAJ:hFOr9nPyWt4C:
