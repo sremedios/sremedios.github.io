@@ -593,18 +593,18 @@
    ========================================================= */
 
 :root {
-  --global-bg-color: #f5f2eb;
-  --global-card-bg-color: #fffdfa;
-  --global-text-color: #1f2937;
-  --global-text-color-light: #5b6572;
-  --global-divider-color: #e6dfd4;
-  --global-theme-color: #295fbe;
+  --global-bg-color: #f5f4f0;
+  --global-card-bg-color: #ffffff;
+  --global-text-color: #1b1e26;
+  --global-text-color-light: #576070;
+  --global-divider-color: #e7e5df;
+  --global-theme-color: #3652c7;
 }
 
 html[data-theme="light"],
 html:not([data-theme="dark"]) {
   body {
-    background: linear-gradient(180deg, #f5f2eb 0%, #f1eee7 100%);
+    background: linear-gradient(180deg, #f6f5f1 0%, #f2f1ec 100%);
   }
 
   .navbar {

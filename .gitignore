@@ -16,5 +16,6 @@ vendor
 # Local-only working docs (not for the public site)
 /CONTEXT.md
 /RUNBOOK.md
+/DEVLOG.md
 /docs/
 .claude/
