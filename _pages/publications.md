@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
+header_icon: fa-solid fa-book-open
 nav: true
 nav_order: 3
 description: Selected publications, full bibliography, and a record of work in medical imaging, inverse problems, and generative methods.

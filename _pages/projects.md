@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /projects/
-title: projects
+title: Projects
+header_icon: fa-solid fa-cube
 nav: true
 nav_order: 2
 description: Selected projects in generative modeling, inverse problems, and self-supervised learning.
@@ -12,7 +13,7 @@ description: Selected projects in generative modeling, inverse problems, and sel
     <div class="kicker">Selected projects</div>
     <h2>Things I've built</h2>
     <p>
-      A few projects that show how I work: generative and self-supervised methods, grounded in the physics of how the data was measured, and built to run at scale. Each is developed on medical imaging, but rests on problem structure — ill-posed inverse problems, scarce paired data, known forward operators — that recurs across domains.
+      A few projects that show how I work: generative and self-supervised methods, grounded in the physics of how the data was measured, and built to run at scale. Each is developed on medical imaging, but rests on problem structure that recurs across domains: ill-posed inverse problems, scarce paired data, and known/modeled forward operators.
     </p>
   </div>
 </section>
@@ -20,7 +21,7 @@ description: Selected projects in generative modeling, inverse problems, and sel
 <section class="section-block">
   <div class="section-heading">
     <div class="kicker">ECLARE · self-supervised super-resolution</div>
-    <h2>Recovering 3D detail from anisotropic MRI — without paired training data</h2>
+    <h2>Recovering 3D detail from anisotropic MRI, without paired training data</h2>
   </div>
 
   <div class="mini-grid">
@@ -33,13 +34,13 @@ description: Selected projects in generative modeling, inverse problems, and sel
     <div class="mini-card">
       <h3>What I built</h3>
       <p>
-        A self-supervised method that learns the super-resolution mapping from a scan's own in-plane slices — modeling the slice profile as a Gaussian kernel to simulate the through-plane degradation. There is no external high-resolution training set; the model adapts to each scan and stays tied to how the image was actually measured. It ships as a pip-installable command-line tool (<code>pip install eclare</code>).
+        A self-supervised method that learns the super-resolution mapping from a scan's own in-plane slices, modeling the slice profile as a Gaussian kernel to simulate the through-plane degradation. There is no external high-resolution training set; the model adapts to each scan and stays tied to how the image was actually measured. It ships as a pip-installable command-line tool (<code>pip install eclare</code>).
       </p>
     </div>
     <div class="mini-card">
       <h3>Result</h3>
       <p>
-        In review at the <em>Journal of Medical Imaging</em>, and usable today as a one-command tool that handles scans with or without slice gaps. It belongs to a line of self-supervised super-resolution work from my research that won Best Paper at SASHIMI 2023 and Best Poster at IPMI 2025.
+        Published in the <em>Journal of Medical Imaging</em>, and usable today as a one-command tool that handles scans with or without slice gaps. It belongs to a line of self-supervised super-resolution work from my research that won Best Paper at SASHIMI 2023 and Best Poster at IPMI 2025.
       </p>
     </div>
   </div>
@@ -66,7 +67,7 @@ description: Selected projects in generative modeling, inverse problems, and sel
     <div class="mini-card">
       <h3>What I built</h3>
       <p>
-        I curated and quality-controlled large-scale 3D brain-MRI datasets and trained 3D denoising diffusion models (sample-, velocity-, and flow-prediction) on top of MONAI, with single- and multi-GPU distributed training. I built the training, data, and evaluation tooling end to end — not just the model.
+        I curated and quality-controlled large-scale 3D brain-MRI datasets and trained 3D denoising diffusion models (sample-, velocity-, and flow-prediction) on top of MONAI, with single- and multi-GPU distributed training. I built the training, data, and evaluation tooling end to end in addition to the model.
       </p>
     </div>
     <div class="mini-card">
@@ -85,15 +86,15 @@ description: Selected projects in generative modeling, inverse problems, and sel
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">PRISM · MICCAI 2025</div>
-    <h2>Estimating MRI slice thickness from a reference — invariant to contrast</h2>
+    <div class="kicker">PRISM · MICCAI 2026</div>
+    <h2>Estimating MRI slice thickness from a reference, invariant to contrast</h2>
   </div>
 
   <div class="mini-grid">
     <div class="mini-card">
       <h3>Problem</h3>
       <p>
-        Super-resolution and harmonization pipelines usually assume you know a scan's through-plane point-spread function (its slice thickness) — but it is often unrecorded, and any estimate has to hold up even when the available reference scan has a different contrast.
+        Super-resolution and harmonization pipelines usually assume you know a scan's through-plane point-spread function (its slice thickness), but it is often unrecorded, and any estimate has to hold up even when the available reference scan has a different contrast.
       </p>
     </div>
     <div class="mini-card">
@@ -105,7 +106,7 @@ description: Selected projects in generative modeling, inverse problems, and sel
     <div class="mini-card">
       <h3>Result</h3>
       <p>
-        Contrast-invariant, reference-based slice-thickness and PSF estimation (reported as sigma and thickness in mm). Accepted at MICCAI 2025 and released under Apache-2.0, so it can be used commercially.
+        Contrast-invariant, reference-based slice-thickness and PSF estimation (reported as sigma and thickness in mm). Accepted at MICCAI 2026 and released under Apache-2.0, so it can be used commercially.
       </p>
     </div>
   </div>

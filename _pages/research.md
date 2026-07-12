@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /research/
-title: research
+title: Research
+header_icon: fa-solid fa-atom
 nav: true
 nav_order: 1
 description: How I think about generative modeling and inverse problems, what I've built, and where the work is heading.

@@ -1,0 +1,147 @@
+/* =========================================================
+   Editorial design system — site-wide.
+   Derived from the creative homepage: Fraunces display +
+   Inter body, navy ink, warm bronze accent, hairline blocks.
+   Imported LAST in main.scss so it wins over _base.
+   Applies to the light theme (dark mode is disabled).
+   ========================================================= */
+
+:root {
+  --global-theme-color: #1f3a5f;   /* navy — links, buttons */
+  --global-hover-color: #14203d;
+  --ed-navy: #14203d;
+  --ed-ink: #1a1d21;
+  --ed-warm: #9a6a2f;              /* bronze-gold: readable accent on cream */
+  --ed-hair: #e2ded3;
+}
+
+/* ---- Typography ---------------------------------------- */
+html body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--ed-ink);
+}
+html h1, html h2, html h3, html h4, html h5, html h6,
+.post-title, .section-heading h2, .section-heading h3,
+.feature-card h3, .thrust-card h3, .mini-card h3, .callout-card h3,
+.timeline-card h3, .glance-card h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+html h1, html h2, html h3, html h4, .post-title { color: var(--ed-navy); }
+
+/* Page title (al-folio page header) + a small gold underline accent */
+.post > .post-header .post-title,
+.post-header .post-title,
+.post-title {
+  position: relative;
+  font-weight: 500;
+}
+
+/* ---- Accents ------------------------------------------- */
+.kicker, .section-kicker, .tag, .eyebrow,
+.timeline-card .date, .glance-year {
+  color: var(--ed-warm) !important;
+}
+
+html:not([data-theme="dark"]) a { color: var(--ed-navy); }
+html:not([data-theme="dark"]) a:hover { color: var(--ed-warm); }
+
+/* ---- De-card: boxed cards -> editorial hairline blocks -- */
+html:not([data-theme="dark"]) .feature-card,
+html:not([data-theme="dark"]) .thrust-card,
+html:not([data-theme="dark"]) .mini-card,
+html:not([data-theme="dark"]) .glance-card,
+html:not([data-theme="dark"]) .callout-card,
+html:not([data-theme="dark"]) .signal-card,
+html:not([data-theme="dark"]) .timeline-card {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid var(--ed-hair) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.2rem 0 0 0 !important;
+  min-height: 0 !important;
+}
+/* timeline keeps its two-column date/content grid */
+html:not([data-theme="dark"]) .timeline-card { padding-top: 1rem !important; }
+
+/* ---- Buttons: less pill, navy solid ------------------- */
+html:not([data-theme="dark"]) .btn-hero {
+  border-radius: 6px !important;
+  background: var(--ed-navy) !important;
+  box-shadow: none !important;
+}
+html:not([data-theme="dark"]) .btn-hero-secondary,
+html:not([data-theme="dark"]) .page-anchor-nav a {
+  border-radius: 6px !important;
+}
+html:not([data-theme="dark"]) .page-anchor-nav a:hover {
+  color: var(--ed-warm);
+  border-color: var(--ed-warm);
+}
+
+/* ---- Section-heading weight to match Fraunces --------- */
+.section-heading h2 { font-weight: 500 !important; }
+
+/* ---- Navbar brand in Fraunces for identity ------------ */
+.navbar-brand.title { font-family: 'Fraunces', Georgia, serif; }
+
+/* ---- Navy hero band on inner pages (echoes the homepage) ----
+   Targets the al-folio page header. layout:home has no
+   .post-header, so the homepage is untouched. */
+.post > .post-header {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 120% at 90% 0%, rgba(233, 185, 110, 0.14), transparent 55%),
+    radial-gradient(90% 100% at 0% 100%, rgba(90, 130, 220, 0.16), transparent 60%),
+    linear-gradient(158deg, #17264a 0%, #101a34 62%, #0c1428 100%);
+  border-radius: 24px;
+  padding: clamp(2rem, 4vw, 3.1rem) clamp(1.5rem, 4vw, 3.1rem);
+  margin: 1.4rem 0 2.6rem;
+  box-shadow: 0 26px 60px rgba(12, 20, 40, 0.24);
+}
+/* faint concentric-ring motif, matching the home hero */
+.post > .post-header::after {
+  content: "";
+  position: absolute; right: -8%; top: -45%;
+  width: 46%; aspect-ratio: 1; border-radius: 50%;
+  background: repeating-radial-gradient(circle at center, rgba(243, 239, 230, 0.05) 0 1px, transparent 1px 26px);
+  pointer-events: none;
+}
+.post > .post-header > * { position: relative; z-index: 1; }
+
+.post > .post-header .post-title {
+  font-family: 'Fraunces', Georgia, serif;
+  color: #f3efe6 !important;
+  font-size: clamp(2.1rem, 3.6vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.post > .post-header .post-description {
+  color: #b7c0d3 !important;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0.7rem 0 0;
+  max-width: 46rem;
+  opacity: 1;
+}
+/* CV: the PDF download icon sits in the title — tint it gold on navy */
+.post > .post-header .post-title a,
+.post > .post-header .post-title .float-right { color: #e9b96e !important; }
+
+/* Per-page gold hero icon (projects/research/publications), echoing the
+   CV's gold PDF glyph — a focal point in the otherwise text-heavy header. */
+.post > .post-header .page-hero-icon {
+  position: absolute;
+  top: clamp(1.7rem, 3.4vw, 2.7rem);
+  right: clamp(1.7rem, 4vw, 3.1rem);
+  z-index: 2;
+  color: #e9b96e;
+  font-size: clamp(2.2rem, 3.2vw, 2.9rem);
+  line-height: 1;
+  opacity: 0.92;
+  filter: drop-shadow(0 6px 16px rgba(233, 185, 110, 0.22));
+}
