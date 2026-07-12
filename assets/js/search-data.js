@@ -11,10 +11,17 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "research",
-          description: "Research vision, current foundations, and future lab agenda in computational medical imaging.",
+          description: "How I think about generative modeling and inverse problems, what I&#39;ve built, and where the work is heading.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Selected projects in generative modeling, inverse problems, and self-supervised learning.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
           },
         },{id: "nav-publications",
           title: "publications",
@@ -30,23 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather.html";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2.html";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "news-received-the-best-poster-award-at-ipmi-2025-for-work-on-cycle-consistent-zero-shot-through-plane-super-resolution-of-anisotropic-head-mri",
+        },{id: "news-received-the-best-poster-award-at-ipmi-2025-for-work-on-cycle-consistent-zero-shot-through-plane-super-resolution-of-anisotropic-head-mri",
           title: 'Received the Best Poster Award at IPMI 2025 for work on cycle-consistent zero-shot...',
           description: "",
           section: "News",},{id: "news-gave-an-invited-talk-at-the-university-of-tokyo-on-through-plane-super-resolution-of-anisotropic-multi-slice-mri",
@@ -60,7 +51,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/CirriculumVitae.pdf", "_blank");
+          window.open("/assets/pdf/CurriculumVitae.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -75,6 +66,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/sremedios", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/s-remedios", "_blank");
         },
       },{
         id: 'social-scholar',
