@@ -3,35 +3,35 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-samuel-w-remedios",
-    title: "Samuel W. Remedios",
+    id: "nav-",
+    title: "",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-research",
-          title: "research",
+          title: "Research",
           description: "How I think about generative modeling and inverse problems, what I&#39;ve built, and where the work is heading.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "Selected projects in generative modeling, inverse problems, and self-supervised learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-publications",
-          title: "publications",
+          title: "Publications",
           description: "Selected publications, full bibliography, and a record of work in medical imaging, inverse problems, and generative methods.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "Full curriculum vitae, including publications, talks, teaching, service, and awards.",
           section: "Navigation",
           handler: () => {
