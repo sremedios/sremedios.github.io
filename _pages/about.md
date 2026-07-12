@@ -2,77 +2,9 @@
 layout: home
 title: Samuel W. Remedios
 permalink: /
-description: Machine learning researcher: generative modeling and inverse problems for medical imaging and beyond.
+description: "Machine learning researcher: generative modeling and inverse problems for medical imaging and beyond."
 nav: false
 ---
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
-
-.vc{ --cream:#f3efe6; --mut:#b7c0d3; --gold:#e9b96e; --navy:#14203d;
-  font-family:'Inter',system-ui,sans-serif; max-width:1180px; margin:0 auto; padding-bottom:2.5rem; }
-html .vc a{ text-decoration:none; }
-
-/* ---- dark hero panel ---- */
-.vc-hero{
-  position:relative; overflow:hidden;
-  background:
-    radial-gradient(120% 90% at 88% 8%, rgba(233,185,110,.16), transparent 55%),
-    radial-gradient(80% 70% at 8% 100%, rgba(90,130,220,.18), transparent 60%),
-    linear-gradient(158deg, #17264a 0%, #101a34 60%, #0c1428 100%);
-  color:var(--cream); border-radius:28px;
-  padding:clamp(2rem,4.6vw,3.8rem);
-  min-height:74vh; display:grid; grid-template-columns:minmax(0,1.6fr) minmax(220px,.8fr);
-  gap:2.6rem; align-items:center;
-  box-shadow:0 30px 70px rgba(12,20,40,.28);
-}
-/* faint concentric-ring motif, evokes imaging / inverse problems */
-.vc-hero::after{
-  content:""; position:absolute; right:-14%; top:-30%; width:60%; aspect-ratio:1; border-radius:50%;
-  background:
-    repeating-radial-gradient(circle at center, rgba(243,239,230,.05) 0 1px, transparent 1px 26px);
-  pointer-events:none;
-}
-.vc-hero > * { position:relative; z-index:1; }
-
-.vc-eyebrow{ font-size:.8rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin:0 0 1.2rem; }
-html .vc .vc-statement{ font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:clamp(2.3rem,4.6vw,4rem);
-  line-height:1.03; letter-spacing:-.02em; color:var(--cream) !important; margin:0 0 1.4rem; }
-html .vc .vc-statement em{ font-style:italic; color:var(--gold) !important; }
-.vc-who{ font-size:1.1rem; line-height:1.6; color:var(--mut); max-width:34rem; margin:0 0 1.7rem; }
-.vc-who b{ color:var(--cream); font-weight:600; }
-
-.vc-actions{ display:flex; flex-wrap:wrap; gap:.7rem; align-items:center; margin-bottom:1.4rem; }
-.vc-actions a.solid{ background:var(--gold); color:#22180a !important; font-weight:700; padding:.65rem 1.2rem; border-radius:999px; }
-.vc-actions a.ghost{ border:1px solid rgba(243,239,230,.3); color:var(--cream) !important; font-weight:600; padding:.65rem 1.1rem; border-radius:999px; }
-.vc-social{ display:flex; flex-wrap:wrap; gap:1.2rem; font-size:.92rem; }
-.vc-social a{ color:var(--mut) !important; border-bottom:1px solid rgba(183,192,211,.35); padding-bottom:1px; }
-.vc-social a:hover{ color:var(--cream) !important; }
-
-.vc-side{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.1rem; }
-.vc-portrait{ width:190px; height:190px; object-fit:cover; border-radius:50%;
-  border:3px solid rgba(233,185,110,.6); box-shadow:0 16px 40px rgba(0,0,0,.35); }
-.vc-facts{ display:grid; gap:.55rem; width:100%; }
-.vc-fact{ font-size:.86rem; color:var(--mut); }
-.vc-fact b{ color:var(--cream); font-weight:600; }
-
-/* ---- cream body ---- */
-.vc-body{ padding:2.6rem .3rem 0; }
-.vc-label{ font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--navy); opacity:.65; margin:0 0 1.2rem; }
-.vc-work{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; }
-.vc-w h3{ font-family:'Fraunces',serif; font-weight:500; font-size:1.25rem; color:var(--navy); margin:0 0 .3rem; }
-.vc-w .v{ font-size:.74rem; text-transform:uppercase; letter-spacing:.06em; color:#8a7a52; font-weight:600; margin:0 0 .5rem; }
-.vc-w p{ color:#4d525b; line-height:1.55; font-size:.93rem; margin:0 0 .5rem; }
-.vc-w .lk{ display:flex; gap:.9rem; font-size:.88rem; }
-html .vc-w .lk a{ color:var(--navy); font-weight:600; border-bottom:1px solid rgba(20,32,61,.3); }
-.vc-close{ margin:2.4rem 0 0; padding-top:1.6rem; border-top:1px solid #e2e0d9; color:#4d525b; line-height:1.6; }
-html .vc-close a{ color:var(--navy); font-weight:600; border-bottom:1px solid rgba(20,32,61,.3); }
-
-@media(max-width:860px){
-  .vc-hero{ grid-template-columns:1fr; min-height:0; text-align:left; }
-  .vc-side{ align-items:flex-start; text-align:left; }
-  .vc-work{ grid-template-columns:1fr; }
-}
-</style>
 
 <div class="vc">
 
