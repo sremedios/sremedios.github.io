@@ -4,13 +4,13 @@ permalink: /research/
 title: research
 nav: true
 nav_order: 1
-description: Research vision, current foundations, and future lab agenda in computational medical imaging.
+description: How I think about generative modeling and inverse problems, what I've built, and where the work is heading.
 ---
 
 <div class="page-anchor-nav">
-  <a href="#vision">Vision</a>
-  <a href="#foundations">Foundations</a>
-  <a href="#thrusts">Future thrusts</a>
+  <a href="#vision">Overview</a>
+  <a href="#foundations">Track record</a>
+  <a href="#thrusts">Directions</a>
   <a href="#impact">Impact</a>
 </div>
 
@@ -24,9 +24,6 @@ description: Research vision, current foundations, and future lab agenda in comp
     <p>
       The broader goal is to move beyond reconstruction systems that work only under narrow conditions and toward methods that hold up in real clinical environments. This motivates a long-term agenda in computational imaging that integrates physical measurement models with modern generative methods to produce systems that are accurate, controllable, and well matched to clinical use.
     </p>
-    <!-- <img src="/assets/img/focvs.jpg" 
-     alt="Computational imaging research pipeline"
-     class="research-figure"> -->
   </div>
   <div class="callout-card">
     <h3>Why this direction matters</h3>
@@ -38,10 +35,10 @@ description: Research vision, current foundations, and future lab agenda in comp
 
 <section id="foundations" class="section-block">
   <div class="section-heading">
-    <div class="kicker">Existing foundations</div>
-    <h2>Foundations for an independent research program</h2>
+    <div class="kicker">Track record</div>
+    <h2>What I've built so far</h2>
     <p>
-      My existing work establishes the scientific and technical foundations for an independent research program in computational imaging. Across these projects, a common theme is that stronger methods come from taking the acquisition process seriously rather than treating imaging as a purely data-driven prediction problem.
+      A common theme across my work is that stronger methods come from taking the measurement process seriously, rather than treating imaging as a purely data-driven prediction problem. A few representative examples:
     </p>
   </div>
   <div class="card-grid">
@@ -71,29 +68,29 @@ description: Research vision, current foundations, and future lab agenda in comp
 
 <section id="thrusts" class="section-block">
   <div class="section-heading">
-    <div class="kicker">Future lab agenda</div>
-    <h2>Three research thrusts for my future lab</h2>
+    <div class="kicker">Directions</div>
+    <h2>Where my research is heading</h2>
     <p>
-      Together, these directions define a future lab agenda that is technically ambitious, clinically grounded, and broad enough to support sustained methodological leadership.
+      Together, these directions are technically ambitious, grounded in real measurement, and broad enough to matter well beyond any single imaging modality.
     </p>
   </div>
   <div class="thrust-grid">
     <div class="thrust-card">
-      <div class="tag">Thrust 1</div>
+      <div class="tag">Direction 1</div>
       <h3>Multi-image and multi-modal computational imaging</h3>
       <p>
         Formalize multi-image inference as a structured generative inverse problem in which each scan is a partial observation of shared anatomy. This direction connects multi-view geometry, probabilistic modeling, and inverse problems in clinically realistic settings involving multiple contrasts, visits, sites, and modalities.
       </p>
     </div>
     <div class="thrust-card">
-      <div class="tag">Thrust 2</div>
+      <div class="tag">Direction 2</div>
       <h3>Co-design of acquisition and reconstruction</h3>
       <p>
         Co-design sensing and reconstruction with differentiable forward models and learned priors to improve scan efficiency, signal quality, and accessibility. The aim is not only better reconstruction, but also a tighter integration between how images are acquired and how information is inferred from them.
       </p>
     </div>
     <div class="thrust-card">
-      <div class="tag">Thrust 3</div>
+      <div class="tag">Direction 3</div>
       <h3>Generative priors for medicine</h3>
       <p>
         Develop generative models with properties required for medicine: anatomical plausibility, controllability, pathology awareness, privacy preservation, and reliability under deployment constraints. A central objective is to make generative priors usable in clinical imaging without sacrificing safety or data fidelity.
@@ -111,7 +108,7 @@ description: Research vision, current foundations, and future lab agenda in comp
     </p>
   </div>
   <div class="button-row">
-    <a class="btn-hero" href="{{ '/assets/pdf/ResearchStatement.pdf' | relative_url }}">Download research statement</a>
-    <a class="btn-hero-secondary" href="{{ '/projects/' | relative_url }}">See project summaries</a>
+    <a class="btn-hero" href="{{ '/projects/' | relative_url }}">See projects</a>
+    <a class="btn-hero-secondary" href="{{ '/assets/pdf/CurriculumVitae.pdf' | relative_url }}">Download CV</a>
   </div>
 </section>

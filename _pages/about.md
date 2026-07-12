@@ -7,25 +7,26 @@ nav: false
 ---
 
 <section class="home-hero">
-  <div class="eyebrow">Faculty candidate in computational medical imaging</div>
+  <div class="eyebrow">Machine learning researcher · Generative modeling &amp; inverse problems</div>
   <div class="hero-grid">
     <div>
-      <h1>Physics-grounded AI for reliable medical imaging</h1>
+      <h1>Generative modeling and inverse problems for ill-posed, data-scarce problems</h1>
       <p class="hero-lede">
-        I develop machine learning methods for medical imaging that explicitly model acquisition physics, anatomy, and data consistency. My goal is to build algorithms that remain reliable across scanners, protocols, and patient populations, and to lay the foundations for a broader research program in generative computational imaging.
+        I build generative models that stay consistent with known physics and work when paired data is scarce. Ph.D. in Computer Science from Johns Hopkins; 60+ peer-reviewed publications across diffusion and generative models, image reconstruction and super-resolution, and self-supervised and zero-shot learning. My methods are developed and validated on medical imaging, but built on problem structure — ill-posed inverse problems, scarce paired data, physical forward operators — that transfers across scientific domains.
       </p>
       <div class="hero-meta">
-        <span class="meta-pill">Postdoctoral Researcher, Johns Hopkins University</span>
-        <span class="meta-pill">Medical imaging</span>
-        <span class="meta-pill">Generative modeling</span>
+        <span class="meta-pill">Diffusion &amp; generative models</span>
         <span class="meta-pill">Inverse problems</span>
-        <span class="meta-pill">Computational imaging</span>
+        <span class="meta-pill">Self-supervised / zero-shot</span>
+        <span class="meta-pill">PyTorch</span>
+        <span class="meta-pill">Distributed HPC</span>
       </div>
       <div class="hero-actions">
-        <a class="btn-hero" href="{{ '/research/' | relative_url }}">Research agenda</a>
-        <a class="btn-hero-secondary" href="{{ '/projects/' | relative_url }}">Selected contributions</a>
+        <a class="btn-hero" href="{{ '/projects/' | relative_url }}">Projects</a>
         <a class="btn-hero-secondary" href="{{ '/publications/' | relative_url }}">Publications</a>
         <a class="btn-hero-secondary" href="{{ '/assets/pdf/CurriculumVitae.pdf' | relative_url }}">Download CV</a>
+        <a class="btn-hero-secondary" href="https://www.linkedin.com/in/s-remedios/">LinkedIn</a>
+        <a class="btn-hero-secondary" href="https://github.com/sremedios">GitHub</a>
       </div>
     </div>
 
@@ -33,78 +34,77 @@ nav: false
       <img src="/assets/img/headshot.jpg" alt="Samuel W. Remedios" class="headshot">
       <h3>At a glance</h3>
       <ul>
-        <li>Builds MRI reconstruction and generative imaging methods grounded in acquisition physics</li>
-        <li>Focuses on robustness across scanners, protocols, and patient populations</li>
-        <li>Develops a research program spanning inverse problems, super-resolution, and generative priors</li>
-        <li>Combines technical depth with visible momentum, awards, and field service</li>
+        <li>Builds generative and inverse-problem methods that hold up under real physical constraints</li>
+        <li>Works in data-scarce regimes: self-supervised, zero-shot, and physics-informed methods</li>
+        <li>Builds the high-performance training and tooling around the models — not just prototypes</li>
+        <li>Ph.D. in Computer Science, Johns Hopkins; Postdoctoral Researcher (Prince lab)</li>
       </ul>
-      <h3>Selected distinctions</h3>
+      <h3>Selected honors</h3>
       <div class="inline-stat-list">
         <span class="inline-stat">NSF GRFP</span>
         <span class="inline-stat">IPMI 2025 Best Poster</span>
         <span class="inline-stat">SASHIMI 2023 Best Paper</span>
-        <span class="inline-stat">Invited talks: Tokyo, NAIST</span>
       </div>
     </aside>
   </div>
 </section>
 
 <section class="home-section">
-  <div class="section-kicker">Research identity</div>
-  <h2>A research program for reliable medical imaging</h2>
+  <div class="section-kicker">What I work on</div>
+  <h2>Generative modeling and inverse problems, built to transfer</h2>
   <p class="section-intro">
-    I work at the intersection of machine learning, optimization, and medical imaging. Across my work, I ask how we can move beyond purely data-driven reconstruction toward methods that incorporate imaging physics, leverage structure in anatomy and acquisition, and remain dependable in real clinical settings.
+    I work at the intersection of machine learning, optimization, and signal processing. The through-line is generation under constraints: pairing data-driven generative priors with hard consistency to known physics, and making methods work when paired data is scarce. I develop and validate this on medical imaging, but the structure — ill-posed inverse problems, scarce paired data, physical forward operators — recurs across scientific domains.
   </p>
 
   <div class="glance-grid">
     <div class="glance-card">
-      <div class="glance-year">Core problem</div>
-      <h3>Reliability across clinical variation</h3>
-      <p>Design imaging algorithms that continue to perform across heterogeneous scanners, acquisition protocols, and patient populations.</p>
+      <div class="glance-year">Focus 1</div>
+      <h3>Generative models and priors</h3>
+      <p>Diffusion, flow, and other generative models used as learned priors — expressive enough to capture real structure, constrained enough to stay trustworthy.</p>
     </div>
     <div class="glance-card">
-      <div class="glance-year">Technical lens</div>
-      <h3>Physics-grounded inference</h3>
-      <p>Develop inverse-problem and generative methods that enforce agreement with measured data instead of depending only on paired training sets.</p>
+      <div class="glance-year">Focus 2</div>
+      <h3>Inverse problems and physics-informed inference</h3>
+      <p>Reconstruction methods that embed the forward operator and enforce agreement with measured data, rather than relying on paired training sets alone.</p>
     </div>
     <div class="glance-card">
-      <div class="glance-year">Application domain</div>
-      <h3>MRI and computational imaging</h3>
-      <p>Focus on MRI as a core domain for reconstruction, super-resolution, and generative modeling, with attention to the practical constraints of clinical imaging.</p>
+      <div class="glance-year">Focus 3</div>
+      <h3>Self-supervised and zero-shot learning</h3>
+      <p>Methods that learn from structure within the data itself, so they hold up in the data-scarce regimes where matched training data does not exist.</p>
     </div>
     <div class="glance-card">
-      <div class="glance-year">Long-term vision</div>
-      <h3>Generative computational imaging</h3>
-      <p>Build a broader program that co-designs imaging systems and inference algorithms for robust, efficient, and accessible medical imaging.</p>
+      <div class="glance-year">Domain</div>
+      <h3>Medical and neuro imaging</h3>
+      <p>Where the methods are proven: MRI reconstruction, super-resolution, and generative modeling under the real constraints of clinical acquisition.</p>
     </div>
   </div>
 </section>
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">Research agenda</div>
-    <h2>Three research thrusts</h2>
+    <div class="kicker">Where this is heading</div>
+    <h2>Directions I'm pushing on</h2>
     <p>
-      My work centers on combining imaging physics with modern generative modeling to create methods that are not only accurate, but also structured, controllable, and clinically reliable.
+      My work centers on combining physical measurement models with modern generative modeling to create methods that are not only accurate, but also structured, controllable, and reliable in deployment.
     </p>
   </div>
   <div class="thrust-grid">
     <div class="thrust-card">
-      <div class="tag">Thrust 1</div>
+      <div class="tag">Direction 1</div>
       <h3>Multi-image and multi-modal computational imaging</h3>
       <p>
         Develop structured generative frameworks that integrate scans across visits, contrasts, sites, and modalities for reconstruction, longitudinal analysis, and downstream clinical tasks.
       </p>
     </div>
     <div class="thrust-card">
-      <div class="tag">Thrust 2</div>
+      <div class="tag">Direction 2</div>
       <h3>Co-design of acquisition and reconstruction</h3>
       <p>
         Couple acquisition design with reconstruction through differentiable physics and learned priors to reduce scan time while improving image quality and access.
       </p>
     </div>
     <div class="thrust-card">
-      <div class="tag">Thrust 3</div>
+      <div class="tag">Direction 3</div>
       <h3>Generative priors for medicine</h3>
       <p>
         Build generative models that are anatomically plausible, controllable, pathology-aware, privacy-preserving, and aligned with the requirements of clinical deployment.
@@ -112,7 +112,7 @@ nav: false
     </div>
   </div>
   <div class="button-row">
-    <a class="btn-hero-secondary" href="{{ '/research/' | relative_url }}">Read the full research vision</a>
+    <a class="btn-hero-secondary" href="{{ '/research/' | relative_url }}">More on my research</a>
   </div>
 </section>
 
@@ -208,21 +208,19 @@ nav: false
 <section class="section-block">
   <div class="mini-grid">
     <div class="mini-card">
-      <h3>Teaching and mentorship</h3>
+      <h3>Community and peer review</h3>
       <p>
-        I teach students to connect imaging physics, algorithms, and modern AI, with emphasis on conceptual understanding, technical rigor, and critical evaluation of model behavior.
+        I review for leading machine learning and imaging venues — including ICLR, CVPR, MICCAI, <em>IEEE Transactions on Image Processing</em>, and <em>Proceedings of the IEEE</em> — and help organize the SASHIMI workshop at MICCAI (2024–2026) and the SynthOCT 2026 challenge.
       </p>
-      <div class="links">
-        <a href="{{ '/teaching/' | relative_url }}">Teaching page</a>
-      </div>
     </div>
     <div class="mini-card">
-      <h3>Professional service</h3>
+      <h3>Get in touch</h3>
       <p>
-        My service includes workshop organization, peer review for leading venues, and sustained engagement with the medical imaging research community.
+        I'm always happy to talk about generative modeling, inverse problems, and hard real-world ML.
       </p>
       <div class="links">
-        <a href="{{ '/service/' | relative_url }}">Service page</a>
+        <a href="https://www.linkedin.com/in/s-remedios/">LinkedIn</a>
+        <a href="mailto:samuel.remedios@jhu.edu">Email</a>
       </div>
     </div>
   </div>

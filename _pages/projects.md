@@ -2,228 +2,130 @@
 layout: page
 permalink: /projects/
 title: projects
-nav: false
+nav: true
 nav_order: 2
-description: Selected research contributions showing the technical arc of my work in computational medical imaging.
+description: Selected projects in generative modeling, inverse problems, and self-supervised learning.
 ---
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">Selected contributions</div>
-    <h2>Projects that demonstrate the arc of my research program</h2>
+    <div class="kicker">Selected projects</div>
+    <h2>Things I've built</h2>
     <p>
-      These projects show how my work moves from clinically grounded problem formulation to technical innovation in inverse problems, generative modeling, and robust medical imaging.
+      A few projects that show how I work: generative and self-supervised methods, grounded in the physics of how the data was measured, and built to run at scale. Each is developed on medical imaging, but rests on problem structure — ill-posed inverse problems, scarce paired data, known forward operators — that recurs across domains.
     </p>
   </div>
 </section>
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">Case study 1</div>
-    <h2>Through-plane super-resolution for anisotropic MRI</h2>
-    <p>
-      A central theme of my research is how to recover missing spatial detail in clinical MRI without relying on unrealistic training assumptions. This line of work addresses a common clinical setting in which scans have high in-plane resolution but thick slices or slice gaps through plane.
-    </p>
+    <div class="kicker">ECLARE · self-supervised super-resolution</div>
+    <h2>Recovering 3D detail from anisotropic MRI — without paired training data</h2>
   </div>
 
   <div class="mini-grid">
     <div class="mini-card">
       <h3>Problem</h3>
       <p>
-        Standard super-resolution methods often assume access to clean paired high-resolution targets or synthetic degradations that do not match how clinical MRI is actually acquired.
+        Clinical MRI is usually acquired with high in-plane resolution but thick slices, so through-plane detail is missing. Supervised super-resolution needs matched high-resolution volumes that simply do not exist for real clinical scans.
       </p>
     </div>
     <div class="mini-card">
-      <h3>Contribution</h3>
+      <h3>What I built</h3>
       <p>
-        I developed acquisition-aware, internally trained, and cycle-consistent approaches that explicitly model the MRI imaging operator, allowing reconstruction methods to learn from the scan itself and better reflect the physics of data acquisition.
+        A self-supervised method that learns the super-resolution mapping from a scan's own in-plane slices — modeling the slice profile as a Gaussian kernel to simulate the through-plane degradation. There is no external high-resolution training set; the model adapts to each scan and stays tied to how the image was actually measured. It ships as a pip-installable command-line tool (<code>pip install eclare</code>).
       </p>
     </div>
     <div class="mini-card">
-      <h3>Why it matters</h3>
+      <h3>Result</h3>
       <p>
-        This work shows how super-resolution can be made more realistic, more robust across settings, and less dependent on idealized supervised pipelines, helping lay the groundwork for clinically credible image enhancement.
+        In review at the <em>Journal of Medical Imaging</em>, and usable today as a one-command tool that handles scans with or without slice gaps. It belongs to a line of self-supervised super-resolution work from my research that won Best Paper at SASHIMI 2023 and Best Poster at IPMI 2025.
       </p>
     </div>
   </div>
 
   <div class="links" style="margin-top: 1rem;">
-    <a href="{{ '/publications/' | relative_url }}">Related publications</a>
+    <a href="{{ '/publications/' | relative_url }}">Paper</a>
+    <a href="https://github.com/sremedios/ECLARE">Code</a>
   </div>
 </section>
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">Case study 2</div>
-    <h2>Zero-shot and internally trained reconstruction</h2>
-    <p>
-      Across several projects, I study how imaging models can reduce dependence on large external paired datasets by learning directly from structure already present within an image or acquisition.
-    </p>
+    <div class="kicker">MedForj · generative prior</div>
+    <h2>A large-scale 3D brain-MRI diffusion model, built to be a reusable prior</h2>
   </div>
 
   <div class="mini-grid">
     <div class="mini-card">
       <h3>Problem</h3>
       <p>
-        Supervised medical imaging pipelines often inherit biases from their training distributions and can fail when applied to new scanners, protocols, or clinical populations.
+        Using generative models as priors for reconstruction requires a model that produces anatomically plausible, minimally preprocessed 3D brain MRI — which in turn requires large, carefully curated training data and training that actually scales.
       </p>
     </div>
     <div class="mini-card">
-      <h3>Contribution</h3>
+      <h3>What I built</h3>
       <p>
-        I developed zero-shot and scan-specific learning methods that train on internal image structure rather than only on external datasets, enabling flexible reconstruction even when matched training data are unavailable.
+        I curated and quality-controlled large-scale 3D brain-MRI datasets and trained 3D denoising diffusion models (sample-, velocity-, and flow-prediction) on top of MONAI, with single- and multi-GPU distributed training. I built the training, data, and evaluation tooling end to end — not just the model.
       </p>
     </div>
     <div class="mini-card">
-      <h3>Why it matters</h3>
+      <h3>Result</h3>
       <p>
-        This work advances a broader research agenda in which medical imaging systems are designed to adapt to local structure and acquisition context, rather than relying exclusively on fixed training corpora.
+        In revision for <em>Nature Scientific Reports</em>, with pre-trained T1-weighted 3D brain weights released on Hugging Face. The model gives a data-driven prior that can be paired with hard data-consistency for reconstruction, instead of depending on paired training data.
       </p>
     </div>
   </div>
 
   <div class="links" style="margin-top: 1rem;">
-    <a href="{{ '/publications/' | relative_url }}">Related work</a>
+    <a href="{{ '/publications/' | relative_url }}">Paper</a>
+    <a href="https://github.com/piksl-research/medforj">Code</a>
   </div>
 </section>
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">Case study 3</div>
-    <h2>Generative priors for MRI inverse problems</h2>
-    <p>
-      I am interested in how modern generative models can be used in medical imaging without sacrificing reliability. This motivates my work on diffusion-based and generative formulations for inverse problems.
-    </p>
+    <div class="kicker">PRISM · MICCAI 2025</div>
+    <h2>Estimating MRI slice thickness from a reference — invariant to contrast</h2>
   </div>
 
   <div class="mini-grid">
     <div class="mini-card">
       <h3>Problem</h3>
       <p>
-        Generative models can capture rich image structure, but naively using them for reconstruction risks producing outputs that look plausible while departing from the actual acquired measurements.
+        Super-resolution and harmonization pipelines usually assume you know a scan's through-plane point-spread function (its slice thickness) — but it is often unrecorded, and any estimate has to hold up even when the available reference scan has a different contrast.
       </p>
     </div>
     <div class="mini-card">
-      <h3>Contribution</h3>
+      <h3>What I built</h3>
       <p>
-        I study data-consistent generative inference, including diffusion-based priors that explicitly enforce agreement with measured observations while still leveraging learned image distributions.
+        PRISM (Profile Recovery via Invariant Spectral Matching) estimates the through-plane PSF by grid-searching candidate Gaussian widths, degrading a high-resolution reference, and matching axial power spectra to the input. Matching in the spectral domain makes it invariant to contrast differences between input and reference. The PSF model is differentiable and implemented in PyTorch.
       </p>
     </div>
     <div class="mini-card">
-      <h3>Why it matters</h3>
+      <h3>Result</h3>
       <p>
-        This work addresses one of the central obstacles to deploying generative models in medicine: how to benefit from expressive priors without enabling clinically unsafe hallucinations.
+        Contrast-invariant, reference-based slice-thickness and PSF estimation (reported as sigma and thickness in mm). Accepted at MICCAI 2025 and released under Apache-2.0, so it can be used commercially.
       </p>
     </div>
   </div>
 
   <div class="links" style="margin-top: 1rem;">
-    <a href="{{ '/research/' | relative_url }}">Research vision</a>
-    <a href="{{ '/publications/' | relative_url }}">Related publications</a>
+    <a href="{{ '/publications/' | relative_url }}">Paper</a>
+    <a href="https://github.com/sremedios/PRISM">Code</a>
   </div>
 </section>
 
 <section class="section-block">
   <div class="section-heading">
-    <div class="kicker">Case study 4</div>
-    <h2>Large-scale 3D brain MRI curation for generative modeling</h2>
+    <div class="kicker">More</div>
+    <h2>Beyond these</h2>
     <p>
-      Building useful generative models for medical imaging requires not only model innovation, but also careful dataset construction and evaluation. I treat this as a research problem in its own right.
+      Related work spans foundation models for whole-head MRI, cross-site harmonization, and diffusion-based reconstruction. The full record is on the publications page.
     </p>
   </div>
-
-  <div class="mini-grid">
-    <div class="mini-card">
-      <h3>Problem</h3>
-      <p>
-        Medical generative modeling is limited by fragmented datasets, variable preprocessing, and a lack of evaluation standards tied to anatomy and downstream utility.
-      </p>
-    </div>
-    <div class="mini-card">
-      <h3>Contribution</h3>
-      <p>
-        I have worked on curating and analyzing large-scale 3D brain MRI datasets for diffusion-model development, with emphasis on anatomical plausibility, data quality, and usefulness for reconstruction tasks.
-      </p>
-    </div>
-    <div class="mini-card">
-      <h3>Why it matters</h3>
-      <p>
-        This work strengthens the empirical foundation for medical generative imaging and supports a more rigorous pipeline from dataset design to clinically meaningful model evaluation.
-      </p>
-    </div>
-  </div>
-
-  <div class="links" style="margin-top: 1rem;">
-    <a href="{{ '/publications/' | relative_url }}">Related publications</a>
-  </div>
-</section>
-
-<section class="section-block">
-  <div class="section-heading">
-    <div class="kicker">Cross-cutting theme</div>
-    <h2>Robustness across scanners, sites, and populations</h2>
-    <p>
-      Across reconstruction, harmonization, and downstream analysis, a recurring goal of my work is to reduce sensitivity to changes in scanner, site, acquisition protocol, and patient population.
-    </p>
-  </div>
-
-  <div class="mini-grid">
-    <div class="mini-card">
-      <h3>Scientific question</h3>
-      <p>
-        How can we design imaging algorithms that remain reliable when the data distribution changes in ways that are inevitable in real-world clinical deployment?
-      </p>
-    </div>
-    <div class="mini-card">
-      <h3>Approach</h3>
-      <p>
-        I combine acquisition-aware modeling, robust learning, and structured priors to reduce unwanted sensitivity to scanner and protocol variation.
-      </p>
-    </div>
-    <div class="mini-card">
-      <h3>Program-level significance</h3>
-      <p>
-        This theme connects my current work to a broader faculty agenda centered on trustworthy and deployable computational imaging.
-      </p>
-    </div>
-  </div>
-
-  <div class="links" style="margin-top: 1rem;">
-    <a href="{{ '/publications/' | relative_url }}">Related publications</a>
-  </div>
-</section>
-
-<section class="section-block">
-  <div class="section-heading">
-    <div class="kicker">Broader scope</div>
-    <h2>Cross-modal collaborations in imaging AI</h2>
-    <p>
-      While MRI is the main technical center of my work, my collaborations span CT, OCT, pathology, ultrasound, and multimodal imaging. These collaborations broaden the questions I ask and reinforce a larger view of computational imaging as a discipline.
-    </p>
-  </div>
-
-  <div class="mini-grid">
-    <div class="mini-card">
-      <h3>Role of collaboration</h3>
-      <p>
-        Working across modalities helps identify which ideas are MRI-specific and which reflect deeper principles in inverse problems, representation learning, and robust image analysis.
-      </p>
-    </div>
-    <div class="mini-card">
-      <h3>Research value</h3>
-      <p>
-        These collaborations extend the reach of my methods while also informing future directions in multimodal and multi-image computational imaging.
-      </p>
-    </div>
-    <div class="mini-card">
-      <h3>Faculty perspective</h3>
-      <p>
-        They also illustrate the collaborative style of lab I aim to build: technically deep, clinically connected, and open to new imaging domains.
-      </p>
-    </div>
-  </div>
-
-  <div class="links" style="margin-top: 1rem;">
-    <a href="{{ '/service/' | relative_url }}">Professional engagement</a>
+  <div class="links">
+    <a href="{{ '/publications/' | relative_url }}">All publications</a>
+    <a href="https://github.com/sremedios">GitHub</a>
   </div>
 </section>

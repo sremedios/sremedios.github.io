@@ -719,3 +719,50 @@ html:not([data-theme="dark"]) {
     color: color-mix(in srgb, var(--global-theme-color) 100%, #1f2937 0%);
   }
 }
+
+/* =========================================================
+   Recruiter polish pass
+   ========================================================= */
+
+/* Tighten the vertical rhythm (was 6rem — too airy) */
+.home-hero,
+.home-section,
+.section-block {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Project Problem / Built / Result triplets: flow evenly and match height,
+   instead of a fixed 2-col grid that leaves an empty quadrant.
+   auto-fit + min(100%, 260px) keeps this responsive on its own. */
+.mini-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  align-items: stretch;
+}
+
+/* Make the standalone section kicker match the uppercase .kicker style */
+.section-kicker {
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--global-theme-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Give the second heading ("Selected honors") room to breathe in the hero card */
+.hero-card ul + h3 {
+  margin-top: 1.4rem;
+}
+
+/* Standalone link rows (e.g. Paper · Code on Projects) need spacing */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+/* Calmer glance/focus cards — less dead space at the bottom */
+.glance-card {
+  min-height: 200px;
+}

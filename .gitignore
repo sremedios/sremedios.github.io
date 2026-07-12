@@ -12,3 +12,9 @@ node_modules/
 vendor
 .idea
 .venv
+
+# Local-only working docs (not for the public site)
+/CONTEXT.md
+/RUNBOOK.md
+/docs/
+.claude/
