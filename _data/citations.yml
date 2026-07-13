@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-10'
+  last_updated: '2026-07-13'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
-    citations: 2
+    citations: 1
     title: 'Beyond MR Image Harmonization: Resolution Matters Too'
     year: '2024'
   H6TdLnoAAAAJ:0EnyYjriUFMC:
@@ -26,7 +26,7 @@ papers:
     title: Deep filter bank regression for super-resolution of anisotropic MR brain images
     year: '2022'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 70
+    citations: 68
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -122,7 +122,7 @@ papers:
     title: Unsupervised OCT image interpolation using deformable registration and generative models
     year: '2025'
   H6TdLnoAAAAJ:QIV2ME_5wuYC:
-    citations: 18
+    citations: 19
     title: Towards an accurate and generalizable multiple sclerosis lesion segmentation model using self-ensembled lesion fusion
     year: '2024'
   H6TdLnoAAAAJ:R3hNpaxXUhUC:
@@ -162,7 +162,7 @@ papers:
     title: Extracting 2D weak labels from volume labels using multiple instance learning in CT hemorrhage detection
     year: '2020'
   H6TdLnoAAAAJ:ULOm3_A8WrAC:
-    citations: 14
+    citations: 13
     title: 'ESPRESO: An algorithm to estimate the slice profile of a single magnetic resonance image'
     year: '2023'
   H6TdLnoAAAAJ:UebtZRa9Y70C:
@@ -178,7 +178,7 @@ papers:
     title: MR slice profile estimation by learning to match internal patch distributions
     year: '2021'
   H6TdLnoAAAAJ:Wp0gIr-vW9MC:
-    citations: 35
+    citations: 34
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
