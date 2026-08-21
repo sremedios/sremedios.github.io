@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-19'
+  last_updated: '2026-08-21'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 2
@@ -186,7 +186,7 @@ papers:
     title: Self-supervised super-resolution for anisotropic MR images with and without slice gap
     year: '2023'
   H6TdLnoAAAAJ:Y0pCki6q_DkC:
-    citations: 18
+    citations: 19
     title: Generalizing deep whole brain segmentation for pediatric and post-contrast MRI with augmented transfer learning
     year: '2020'
   H6TdLnoAAAAJ:YFjsv_pBGBYC:
