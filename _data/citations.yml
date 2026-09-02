@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-21'
+  last_updated: '2026-09-02'
 papers:
   H6TdLnoAAAAJ:-f6ydRqryjwC:
     citations: 2
@@ -30,7 +30,7 @@ papers:
     title: International Workshop on Simulation and Synthesis in Medical Imaging
     year: '2023'
   H6TdLnoAAAAJ:4DMP91E08xMC:
-    citations: 76
+    citations: 78
     title: 'HACA3: A unified approach for multi-site MR image harmonization'
     year: '2023'
   H6TdLnoAAAAJ:4TOpqqG69KYC:
@@ -146,7 +146,7 @@ papers:
     title: 'CATNUS: Coordinate-Aware Thalamic Nuclei Segmentation Using T1-Weighted MRI'
     year: '2025'
   H6TdLnoAAAAJ:Se3iqnhoufwC:
-    citations: 27
+    citations: 28
     title: Automated classification of resting-state fMRI ICA components using a deep Siamese network
     year: '2022'
   H6TdLnoAAAAJ:SeFeTyx0c_EC:
@@ -154,7 +154,7 @@ papers:
     title: 'The Impact of Site Variability on Volumetric Analysis in a Multi-Site MRI Dataset: A Case for Image Harmonization'
     year: '2026'
   H6TdLnoAAAAJ:TFP_iSt0sucC:
-    citations: 7
+    citations: 8
     title: The relationship of white matter tract orientation to vascular geometry in the human brain
     year: '2025'
   H6TdLnoAAAAJ:TQgYirikUcIC:
@@ -162,7 +162,7 @@ papers:
     title: Unique MS lesion identification from MRI
     year: '2025'
   H6TdLnoAAAAJ:Tyk-4Ss8FVUC:
-    citations: 10
+    citations: 11
     title: Extracting 2D weak labels from volume labels using multiple instance learning in CT hemorrhage detection
     year: '2020'
   H6TdLnoAAAAJ:ULOm3_A8WrAC:
